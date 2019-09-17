@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+a {
+  color: teal;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.menu li {
+  margin: 1vh;
+  padding: 1vh;
+  display: inline;
+}

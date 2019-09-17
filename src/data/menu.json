@@ -1,0 +1,40 @@
+{
+  "Drinks": {
+    "Water": [
+      { "name": "Water 500ml", "value": 500 },
+      { "name": "Water 750ml", "value": 800 }
+    ],
+    "Soda": [
+      { "name": "Soda 500ml", "value": 700 },
+      { "name": "Soda 750ml", "value": 1000 }
+    ],
+    "Coffee": [
+      { "name": "American Coffee", "value": 500 },
+      { "name": "Coffee and Milk", "value": 700 }
+    ],
+    "Juice": [{ "name": "Juice", "value": 700 }]
+  },
+  "Brakfast": [{ "name": "Sandwich jamón-queso", "value": 1000 }],
+  "Main": {
+    "Hamburguesas": {
+      "Simple": [
+        { "name": "Simple Res", "value": 1500 },
+        { "name": "Simple Pollo", "value": 1500 },
+        { "name": "Simple Vegetariana", "value": 1500 }
+      ],
+      "Doble": [
+        { "name": "Doble Res", "value": 2500 },
+        { "name": "Doble Pollo", "value": 2500 },
+        { "name": "Doble Vegetariana", "value": 2500 }
+      ]
+    },
+    "Agregados": [
+      { "name": "+ Queso", "value": 500 },
+      { "name": "+ Huevo", "value": 500 }
+    ],
+    "Acompañamientos": [
+      { "name": "Papas Fritas", "value": 500 },
+      { "name": "Onion Rings", "value": 500 }
+    ]
+  }
+}
