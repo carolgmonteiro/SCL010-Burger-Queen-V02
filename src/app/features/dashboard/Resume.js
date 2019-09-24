@@ -2,9 +2,9 @@ import React from "react";
 // import '../App.css';
 import "bootstrap/dist/css/bootstrap.css";
 
-function OtherComponent() {
+function Resume() {
   const getContent = () => {
-    return "Other component";
+    return "Resume";
   };
 
   let content = getContent();
@@ -12,4 +12,4 @@ function OtherComponent() {
   return <span> {content} </span>;
 }
 
-export default OtherComponent;
+export default Resume;

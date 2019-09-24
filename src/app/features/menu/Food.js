@@ -2,8 +2,8 @@ import React from "react";
 // import "./App.css";
 import { Menu } from "../../../data/menu.json";
 import "bootstrap/dist/css/bootstrap.css";
-// import Img from "../../img";
-class Drinks extends React.Component {
+
+class Food extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,34 +16,35 @@ class Drinks extends React.Component {
         <div>
           <div>
             <h6>Breakfast</h6>
-            {Menu.Coffee.map(btn => (
+            {Menu.Sandwich.map(btn => (
               <button
                 onClick={() => this.props.add(btn.value, btn.name)}
-                class="main-button"
-              >
-                {btn.name}
-              </button>
-            ))}
-            {Menu.Juice.map(btn => (
-              <button
-                onClick={() => this.props.add(btn.value, btn.name)}
-                class="main-button"
+                className="main-button"
               >
                 {btn.name}
               </button>
             ))}
 
             <h6>Main</h6>
-            {Menu.Water.map(btn => (
+            {Menu.Simple_Burger.map(btn => (
               <button
                 onClick={() => this.props.add(btn.value, btn.name)}
                 class="main-button"
               >
                 {btn.name}
-                <img src={btn.img} alt="icon"></img>
               </button>
             ))}
-            {Menu.Soda.map(btn => (
+            {Menu.Double_Burger.map(btn => (
+              <button class="main-button">{btn.name}</button>
+            ))}
+          </div>
+          <div className="item-btn-row">
+            {Menu.Toppings.map(btn => (
+              <button class="main-button">{btn.name}</button>
+            ))}
+          </div>
+          <div className="item-btn-row">
+            {Menu.Side_Diches.map(btn => (
               <button class="main-button">{btn.name}</button>
             ))}
           </div>
@@ -52,4 +53,4 @@ class Drinks extends React.Component {
     );
   }
 }
-export default Drinks;
+export default Food;
