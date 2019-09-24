@@ -1,8 +1,16 @@
 {
-  "Drinks": {
+  "Menu": {
     "Water": [
-      { "name": "Water 500ml", "value": 500 },
-      { "name": "Water 750ml", "value": 800 }
+      {
+        "img": "../../../img/water_small.svg",
+        "name": "Water 500ml",
+        "value": 500
+      },
+      {
+        "img": "../../../img/water_big.svg",
+        "name": "Water 750ml",
+        "value": 800
+      }
     ],
     "Soda": [
       { "name": "Soda 500ml", "value": 700 },
@@ -12,28 +20,24 @@
       { "name": "American Coffee", "value": 500 },
       { "name": "Coffee and Milk", "value": 700 }
     ],
-    "Juice": [{ "name": "Juice", "value": 700 }]
-  },
-  "Brakfast": [{ "name": "Sandwich jamón-queso", "value": 1000 }],
-  "Main": {
-    "Hamburguesas": {
-      "Simple": [
-        { "name": "Simple Res", "value": 1500 },
-        { "name": "Simple Pollo", "value": 1500 },
-        { "name": "Simple Vegetariana", "value": 1500 }
-      ],
-      "Doble": [
-        { "name": "Doble Res", "value": 2500 },
-        { "name": "Doble Pollo", "value": 2500 },
-        { "name": "Doble Vegetariana", "value": 2500 }
-      ]
-    },
-    "Agregados": [
-      { "name": "+ Queso", "value": 500 },
-      { "name": "+ Huevo", "value": 500 }
+    "Juice": [{ "name": "Juice", "value": 700 }],
+    "Sandwich": [{ "name": "Sandwich ham & cheese ", "value": 1000 }],
+    "Simple_Burger": [
+      { "name": "Simple Burger meat", "value": 1500 },
+      { "name": "Simple Burger chicken", "value": 1500 },
+      { "name": "Simple Burger veggie", "value": 1500 }
     ],
-    "Acompañamientos": [
-      { "name": "Papas Fritas", "value": 500 },
+    "Double_Burger": [
+      { "name": "Double Burger meat", "value": 2500 },
+      { "name": "Double Burger chicken", "value": 2500 },
+      { "name": "Double Burger veggie", "value": 2500 }
+    ],
+    "Toppings": [
+      { "name": "+ Cheese", "value": 500 },
+      { "name": "+ Egg", "value": 500 }
+    ],
+    "Side_Diches": [
+      { "name": "French Fries", "value": 500 },
       { "name": "Onion Rings", "value": 500 }
     ]
   }

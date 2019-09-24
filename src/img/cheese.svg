@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60.001" height="56.012" viewBox="0 0 60.001 56.012">
+    <defs>
+        <style>
+            .cls-1{fill:#4f1a0f}
+        </style>
+    </defs>
+    <g id="_001---Swiss-Cheese" data-name="001---Swiss-Cheese" transform="translate(-.999 -.988)">
+        <path id="Shape" d="M60.481 18.123C27.3-.073 29.381 1 29 1 3.427 1 1.1 15.252 1.01 15.858.993 15.974 1 13.609 1 54a3 3 0 0 0 3 3h54a3 3 0 0 0 3-3V40.92a1 1 0 0 0-.361-.77c-.469-.388-.8-.16-1.539-.151a6 6 0 1 1 .715-11.936A1 1 0 0 0 61 27.08V19a1 1 0 0 0-.519-.877zM3 16.084C3.179 15.143 5.937 3.09 28.745 3L56.1 18H3zM15 28a6 6 0 0 1-5.654-8h11.308A6 6 0 0 1 15 28zm44-2a8.022 8.022 0 0 0-7.6 10.555A7.846 7.846 0 0 0 59 42v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V20h4.262a7.994 7.994 0 1 0 15.476 0H59z" class="cls-1"/>
+        <path id="Shape-2" d="M44 47a4 4 0 1 0 4-4 4 4 0 0 0-4 4zm4-2a2 2 0 1 1-2 2 2 2 0 0 1 2-2z" class="cls-1" data-name="Shape"/>
+        <path id="Shape-3" d="M28 35a9 9 0 1 0 8.706 6.759A9 9 0 0 0 28 35zm0 2a7.011 7.011 0 0 1 6.7 4.982 6.983 6.983 0 0 1-13.4 0A7.011 7.011 0 0 1 28 37zm0 14a7.01 7.01 0 0 1-6.7-5 9 9 0 0 0 13.41 0A7.01 7.01 0 0 1 28 51z" class="cls-1" data-name="Shape"/>
+        <path id="Shape-4" d="M10 34a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm0 6a2 2 0 1 1 2-2 2 2 0 0 1-2 2z" class="cls-1" data-name="Shape"/>
+        <path id="Shape-5" d="M42 34a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0-8a3 3 0 1 1-3 3 3 3 0 0 1 3-3z" class="cls-1" data-name="Shape"/>
+        <circle id="Oval" cx="1" cy="1" r="1" class="cls-1" transform="translate(26 29)"/>
+        <circle id="Oval-2" cx="1" cy="1" r="1" class="cls-1" data-name="Oval" transform="translate(32 23)"/>
+        <circle id="Oval-3" cx="1" cy="1" r="1" class="cls-1" data-name="Oval" transform="translate(11 48)"/>
+        <circle id="Oval-4" cx="1" cy="1" r="1" class="cls-1" data-name="Oval" transform="translate(42 38)"/>
+    </g>
+</svg>

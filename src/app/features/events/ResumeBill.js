@@ -3,12 +3,12 @@ import React from "react";
 class ResumeBill extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-dark bg-dark ">
+      <div className="lead">
         <form className="form-group">
-          <input type="text" name="waiter" placeholder="Waiter" />
           <input type="text" name="client" placeholder="Client" />
         </form>
-      </nav>
+        <div className="form-group">Pedidos</div>
+      </div>
     );
   }
 }
