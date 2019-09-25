@@ -19,6 +19,13 @@ li {
 
 .container2, .container, .row {
 display: flex;
-margin-right: 20%;
 
+}
+
+.container{
+	margin-left: 15%;
+}
+
+.container2 {
+	margin-left: 500px;
 }
