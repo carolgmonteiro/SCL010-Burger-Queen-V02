@@ -47,19 +47,21 @@ export default Menu;*/
 
 function Menu() {
   return (
-     <div className="container">
-         <div classname="row">
-        <div className="col-3">
-          <NavBarMenu
-           input className="col-6" type="text" name="waiter" placeholder="Waiter" />
+     
+        
+              <div className="container">
+         <div className="row">
+ <NavBarMenu
 
-        </div>
-
-              <div className="col-3">
+           input className="col-4" type="text" name="waiter" placeholder="Waiter" />
+         
+ 
+              <div className="col-4">
      
               <ResumeBill/>
 
-       
+
+           
         </div>
       </div>
     </div>

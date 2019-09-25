@@ -8,6 +8,8 @@ import Food from "../menu/Food";
 function NavBarMenu() {
   return (
     <Router>
+             
+           
       <div className="lead">
         <form className="form-group">
           <input type="text" name="waiter" placeholder="Waiter" />
@@ -26,6 +28,9 @@ function NavBarMenu() {
         </ul>
         <Route exact path="/drinks" component={Drinks} />
         <Route path="/main" component={Food} />
+      
+
+      
       </div>
     </Router>
   );

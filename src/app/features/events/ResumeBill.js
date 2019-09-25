@@ -22,22 +22,32 @@ class ResumeBill extends React.Component {
 
   render() {
     return (
+       <div className="col-4" >
       <div className="lead">
+       <div className="form-group">
         <form onSubmit={this.handleSubmit}
+
         className="form-group">
+
           <input onChange={this.handleChange} type="text" name="client" placeholder="Client" />
       
       <ul className="navbar navbar-dark bg-dark">
+
        <a href="/pedidos">
+
             <Link to="/pedidos" className="text-white">
+            
            Pedidos
+          
             </Link>
           </a>
           </ul>
-    
+
 
         <button onClick={this.handleClick} className="btn btn-primary">Send</button>
   </form>
+  </div>
+ </div>
   </div>
     );
   }

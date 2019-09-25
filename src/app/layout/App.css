@@ -17,7 +17,7 @@ li {
   display: inline;
 }
 
-.container2 {
+.container2, .container, .row {
 display: flex;
 margin-right: 20%;
 
