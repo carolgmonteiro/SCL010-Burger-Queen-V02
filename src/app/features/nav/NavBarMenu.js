@@ -20,8 +20,7 @@ function NavBarMenu() {
               Drinks
             </Link>
           </a>
-            </ul>
-             <ul className="navbar navbar-dark bg-dark">
+            
           <a href="/main">
             <Link to="/main" className="text-white">
               Food
