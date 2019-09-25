@@ -20,12 +20,15 @@ function NavBarMenu() {
               Drinks
             </Link>
           </a>
+            </ul>
+             <ul className="navbar navbar-dark bg-dark">
           <a href="/main">
             <Link to="/main" className="text-white">
               Food
             </Link>
           </a>
-        </ul>
+          </ul>
+      
         <Route exact path="/drinks" component={Drinks} />
         <Route path="/main" component={Food} />
       
