@@ -37,8 +37,8 @@ class ResumeBill extends React.Component {
       <ul className="navbar navbar-dark bg-dark">
 
        <a href="/pedidos">
-            <Link to="/pedidos" className="text-white">
-           Pedidos
+            <Link to="/resume" className="text-white">
+           Resume
             </Link>
           </a>
           </ul>
