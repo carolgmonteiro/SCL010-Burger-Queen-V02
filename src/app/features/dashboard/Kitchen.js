@@ -9,5 +9,5 @@ function Kitchen() {
     </div>
   );
 }
-console.log(Kitchen);
+
 export default Kitchen;

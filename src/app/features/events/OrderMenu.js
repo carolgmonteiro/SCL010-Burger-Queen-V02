@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // import { db } from "../../../data/firebase";
 import firebase from "../../../data/firebase";
 
@@ -39,7 +39,7 @@ class OrderMenu extends React.Component {
     db.settings({
       timestampsInSnapshots: true
     });
-    const userRef = db.collection("order").add({
+    db.collection("order").add({
       waiter: this.state.waiter,
       client: this.state.client
     });
@@ -76,15 +76,16 @@ class OrderMenu extends React.Component {
     return (
       <div className="lead">
         <div className="form-group">
-          <form onSubmit={this.addOrder} className="form-group">
-            <input
+          <div className="row1">
+            <form onSubmit={this.addOrder} className="form-group">
+              <input
               onChange={this.handleInput}
               type="text"
               name="waiter"
               placeholder="Waiter"
               value={this.state.waiter}
-            />
-            <input
+               />
+               <input
               onChange={this.handleInput}
               type="text"
               name="client"
@@ -92,11 +93,11 @@ class OrderMenu extends React.Component {
               value={this.state.client}
             />
           </form>
-          <ul>Order</ul>
-          <button onClick={this.addOrder} className="btn btn-primary">
-            Send
-          </button>
+          <a href="/order/menu" className="sendKitchen btn btn-primary">
+    Send Kitchen
+    </a>
           <div></div>
+          </div>
         </div>
       </div>
     );
