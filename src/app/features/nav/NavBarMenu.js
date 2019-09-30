@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 
 
-function ShowMenu() {
+function NavBarMenu() {
   return (
     <div class="row">
       <div class="col-xs-2 col-md-2">
@@ -28,4 +28,4 @@ function ShowMenu() {
   );
 }
 
-export default ShowMenu;
+export default NavBarMenu;
