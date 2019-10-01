@@ -5,17 +5,17 @@ import OrderMenu from "../events/OrderMenu";
 import App from "../../../app/layout/App.css";
 
 class Menu extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      list: [],
-      waiter: "",
-      client: "",
-      selectedApp: "menu",
-      errorMsg: "",
-      loading: false
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     list: [],
+  //     waiter: "",
+  //     client: "",
+  //     selectedApp: "menu",
+  //     errorMsg: "",
+  //     loading: false
+  //   };
+  // }
 
   render() {
     return (
