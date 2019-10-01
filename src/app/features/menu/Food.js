@@ -7,14 +7,24 @@ class Food extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "Sandwich_ham_&_cheese",
-      value: "$500"
+      name: " ",
+      value: " "
     };
+    this.onClickToAdd = this.onClickToAdd.bind(this);
   }
 
- onClickToAdd(){
-  this.props.clickToAdd(this.state.name,this.state.value);
- }
+  onClickToAdd(){
+      this.setState({name: this.state.name.concat("Sandwich ham & cheese"), value: this.state.value});
+  console.log("onclicktoadd", this.state.name, this.state.value)
+
+  }
+
+  componentDidMount(props) {
+    console.log(this.props.name)
+  }
+
+
+
   render() {
 
     return (
@@ -25,11 +35,10 @@ class Food extends React.Component {
       <div className="line"></div>
             <h6>Breakfast</h6>
             
-            {Menu.Sandwich.map(btn => (
-              <button 
+            {Menu.Sandwich.map((btn) => (
+            <button key = {btn}
                 onClick={ this.onClickToAdd.bind(this)  }
                 className="main-button">
-                 <img src={require('../../../../src/img/sandwich_breakfest.svg')} height="50" width="50" />
               <div><p>{btn.name}</p></div>  
               <div><p>${btn.value}</p></div>
               </button>
@@ -40,85 +49,49 @@ class Food extends React.Component {
             <div className="burger-button">
             {Menu.Simple_Burger.map(btn => (
               <button
-                onClick={this.onClickToAdd.bind(this)}
+                
                 className="main-button">
-                <img src={require('../../../../src/img/simple_burger_meat.svg')} height="50" width="50" />
+                <img src={btn.img}></img>
                 <div><p>{btn.name}</p></div>  
               <div><p>${btn.value}</p></div>
               </button>
               ))}
             </div>
             <div className="burger-button">
-            {Menu.Double_Burger.map(btn => (
-              <button className="main-button">
-                <img src={require('../../../../src/img/double_burger_meat.svg')} height="50" width="50" />
+            {Menu.Double_Burger.map((btn, i ) => (
+              <button key = {i}
+                onClick={ this.onClickToAdd.bind(this)  }
+                className="main-button">
+                <img src={btn.img}></img>
                 <div><p>{btn.name}</p></div>  
               <div><p>${btn.value}</p></div>
               </button>
             ))}
             </div>
           </div>
-     
-
-          <h6>Toppings</h6>
-      
- 
           <div className="item-btn-row">
-            {Menu.Toppings1.map(btn => (
-          
-              <button className="col-md-5 col-md-offset-5">
-               
-              <img src={require('../../../../src/img/cheese.svg')} height="50" width="50" />
-              <div><p>{btn.name}</p></div>  
-              <div><p>${btn.value}</p></div>
-               
-  </button>
-    ))}
-          </div>
-
-              <div className="item-btn-row">
             {Menu.Toppings.map(btn => (
-              <button className="col-md-5 col-md-offset-5">
-           
-              <img src={require('../../../../src/img/egg.svg')} height="50" width="50" />
+              <button className="main-button">
+              <img src={btn.img}></img>
               <div><p>{btn.name}</p></div>  
               <div><p>${btn.value}</p></div>
-           
+              
               </button>
             ))}
           </div>
-          
-
-        
           <div className="item-btn-row">
-            {Menu.Side_Diches1.map(btn => (
-              <button className="col-md-5 col-md-offset-5">
-              <img src={require('../../../../src/img/fried-potatoes.svg')} height="50" width="50" />
-              <div><p>{btn.name}</p></div>  
-              <div><p>${btn.value}</p></div>
-              </button>
-            ))}
-             </div>
-
-            <div className="item-btn-row">
             {Menu.Side_Diches.map(btn => (
-              <button className="col-md-5 col-md-offset-5">
-              <img src={require('../../../../src/img/caja-de-aros-de-cebolla.svg')} height="50" width="50" />
+              <button className="main-button">
+              <img src={btn.img}></img>
               <div><p>{btn.name}</p></div>  
               <div><p>${btn.value}</p></div>
               </button>
             ))}
-            </div>
-            </div>
-               </div>
-     
-     
-    
-  
-       
-   
-    );  
-
+          </div>
+        </div>
+      </div>
+    );
   }
 }
+// onClick={() => this.props.add(btn.value, btn.name)}
 export default Food;

@@ -18,6 +18,8 @@ class App extends Component {
       <div className="col-xs-2 col-md-2">
         <img src={require('../../../src/img/LOGO_BURGER_QUEEN-02.png')} alt="logo"/>
       </div>
+
+      
       <div className="col-xs-4 col-md-4"></div>      
       <div className="col-xs-2 col-md-2">
         <Link to={'/menu'} className="nav-link"> Menu </Link>
@@ -31,6 +33,7 @@ class App extends Component {
         <Link to={'/resume'} className="nav-link">Resume</Link>
       </div>     
     </div>
+  
 
       <Switch>
         <Route exact path='/menu' component={Menu} />
