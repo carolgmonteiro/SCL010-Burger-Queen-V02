@@ -8,19 +8,24 @@ class Food extends React.Component {
     super(props);
     this.state = {
       name: " ",
-      value: " "
+      value: " ",
+      watch: false,
+      watchfood: false,
+      watchliquids: false,
+      data: props.data,
     };
     this.onClickToAdd = this.onClickToAdd.bind(this);
+
   }
 
-  onClickToAdd(){
+  onClickToAdd(props){
       this.setState({name: this.state.name.concat("Sandwich ham & cheese"), value: this.state.value});
   console.log("onclicktoadd", this.state.name, this.state.value)
 
   }
 
   componentDidMount(props) {
-    console.log(this.props.name)
+   /* console.log(this.props.name)*/
   }
 
 
@@ -30,6 +35,7 @@ class Food extends React.Component {
     return (
 
       <div className="col-md-8">
+      {this.state.name}
         <div>
           <div>
       <div className="line"></div>
