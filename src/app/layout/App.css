@@ -30,6 +30,24 @@ display: flex;
 	margin-left: 200px;
 }
 
+.main-button{
+  outline: none;
+  background-color: white;
+  border:none;
+}
+.lead{
+  background-color: white;
+}
+
+.burger-button{
+  display: flex;
+
+}
+.line{
+  background-color: #F72C25;
+  height: 2px;
+}
+
 .orderKitchen-container {
 
 }
@@ -52,3 +70,9 @@ margin-left: 50%;
 .ShowMenu {
   
 }
+
+.TabFoodDrinks {
+  margin-left: 5%;
+}
+
+

@@ -2,12 +2,12 @@
   "Menu": {
     "Water": [
       {
-        "img": "../../../img/water_small.svg",
+        "img": "../img/water_small.svg",
         "name": "Water 500ml",
         "value": 500
       },
       {
-        "img": "../../../img/water_big.svg",
+        "img": "../img/water_big.svg",
         "name": "Water 750ml",
         "value": 800
       }
@@ -20,7 +20,7 @@
       { "name": "American Coffee", "value": 500 },
       { "name": "Coffee and Milk", "value": 700 }
     ],
-    "Juice": [{ "name": "Juice", "value": 700 }],
+    "Natural_Juice": [{ "name": "Natural_Juice", "value": 700 }],
     "Sandwich": [{ "name": "Sandwich ham & cheese ", "value": 1000 }],
     "Simple_Burger": [
       { "name": "Simple Burger meat", "value": 1500 },
@@ -32,12 +32,16 @@
       { "name": "Double Burger chicken", "value": 2500 },
       { "name": "Double Burger veggie", "value": 2500 }
     ],
+    "Toppings1": [
+      { "name": "+ Cheese", "value": 500 }
+    ],
     "Toppings": [
-      { "name": "+ Cheese", "value": 500 },
       { "name": "+ Egg", "value": 500 }
     ],
+    "Side_Diches1": [
+      { "name": "French Fries", "value": 500 }
+    ],
     "Side_Diches": [
-      { "name": "French Fries", "value": 500 },
       { "name": "Onion Rings", "value": 500 }
     ]
   }
