@@ -1,9 +1,13 @@
 .App {
   text-align: center;
 }
+h6 {
+  color: #f72c25;
+  margin: 35px;
+}
 
 a {
-  color: teal;
+  color: #4f1a0f;
   text-decoration: none;
 }
 
@@ -17,62 +21,77 @@ li {
   display: inline;
 }
 
-.container2, .container, .row {
-display: flex;
-
+::placeholder {
+  color: var(--principalBlue);
 }
 
-.container{
-	margin-left: 10%;
+.inputFormulary {
+  border: none;
+  border-bottom: 1px solid var(--babyBlue);
+  color: var(--principalBlue);
+  padding: 20px 16px 16px 30px;
+  position: relative;
+}
+.container2,
+.container,
+.row {
+  display: flex;
+}
+
+.container {
+  margin-left: 10%;
 }
 
 .container2 {
-	margin-left: 200px;
+  margin-left: 200px;
 }
 
-.main-button{
+.main-button {
   outline: none;
   background-color: white;
-  border:none;
+  border: none;
+  margin: 25px;
 }
-.lead{
+.lead {
   background-color: white;
+  padding: inherit;
 }
 
-.burger-button{
+.burger-button {
   display: flex;
-
 }
-.line{
-  background-color: #F72C25;
+.line {
+  background-color: #f72c25;
   height: 2px;
+  margin: 35px;
+}
+
+p {
+  color: #4f1a0f;
+}
+
+.drinks-button {
+  display: flex;
 }
 
 .orderKitchen-container {
-
 }
 
 .Order-list {
-
 }
 
 .Order-container {
-
-	
 }
 
-.row, .row1 {
-padding-top: 5%;
-margin-left: 50%;
-
+.row,
+.row1 {
+  padding-top: 5%;
+  /* margin-left: 50%; */
 }
 
 .ShowMenu {
-  
 }
 
 .TabFoodDrinks {
   margin-left: 5%;
 }
-
-

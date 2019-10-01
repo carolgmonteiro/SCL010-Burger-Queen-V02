@@ -19,6 +19,42 @@ class OrderKitchen extends React.Component {
 
 export default OrderKitchen;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*class OrderKitchen extends Component {
+
+  render() {
+    return this.props.data.map(e => (
+      <div key={e.data.id}>
+        <p>{e.data.createdAt}</p>
+        <p>{"Client: " + e.data.client}</p>
+        <p>{"Waiter: " + e.data.waiter}</p>
+        <div className="template-order">
+          <button className="btn-order-template" onClick={console.log("ready")}>
+            Ready
+          </button>
+        </div>
+      </div>
+    ));
+  }
+}
+
+export default OrderKitchen;
+
 // class OrderKitchen extends React.Component {
 //   constructor(props) {
 //     super(props);
