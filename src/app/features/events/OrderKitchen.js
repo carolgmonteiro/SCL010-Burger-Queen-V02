@@ -1,14 +1,42 @@
-import React, { Component } from 'react';
-import "bootstrap/dist/css/bootstrap.css";
-// import ShowMenu from '../../../app/features/nav/ShowMenu.js'
-// import menujson from '../../../data/menu.json'
-// import OrderList from '../../../app/features/events/OrderList.js'
-// import {Link} from 'react-router-dom';
+import React from "react";
 
-class OrderKitchen extends Component {
+class OrderKitchen extends React.Component {
+  render() {
+    return this.props.data.map(e => (
+      <div key={e.data.id}>
+        <p>{e.data.createdAt}</p>
+        <p>{"Client: " + e.data.client}</p>
+        <p>{"Waiter: " + e.data.waiter}</p>
+        <div className="template-order">
+          <button className="btn-order-template" onClick={console.log("ready")}>
+            Ready
+          </button>
+        </div>
+      </div>
+    ));
+  }
+}
+
+export default OrderKitchen;
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*class OrderKitchen extends Component {
+
   render() {
     return (
       <React.Fragment>
@@ -23,4 +51,4 @@ class OrderKitchen extends Component {
 }
 
 
-export default OrderKitchen;
+export default OrderKitchen;*/

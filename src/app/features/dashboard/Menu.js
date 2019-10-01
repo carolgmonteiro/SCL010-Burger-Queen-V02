@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-// import ShowMenu from '../../../app/features/nav/ShowMenu.js';
 // import App from "../../../app/layout/App.css";
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Drinks from "../menu/Drinks";
@@ -10,6 +9,7 @@ import "react-tabs/style/react-tabs.css";
 import drinksIcon from "../../../img/menu_drink_icon.svg";
 import foodIcon from "../../../img/menu_food_icon.svg";
 import firebase from "../../../data/firebase";
+import OrderMenu from "../../../app/features/events/OrderMenu.js"
 
 
 

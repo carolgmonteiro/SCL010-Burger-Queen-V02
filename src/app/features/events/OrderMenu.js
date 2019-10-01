@@ -1,27 +1,18 @@
 import React from "react";
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-// import { db } from "../../../data/firebase";
 import firebase from "../../../data/firebase";
+import moment from "moment";
 
 class OrderMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       waiter: "",
-      client: ""
+      client: "",
+      order: []
     };
+    this.addOrder = this.addOrder.bind(this);
+    this.clearOrder = this.clearOrder.bind(this);
   }
-
-  // handleChange = e => {
-  //   console.log({
-  //     name: e.target.name,
-  //     value: e.target.value
-  //   });
-  // };
-
-  // handleClick = e => {
-  //   console.log("Button was clicked");
-  // };
 
   handleInput = e => {
     this.setState({
@@ -33,59 +24,101 @@ class OrderMenu extends React.Component {
     });
   };
 
+  addToList(optionToAdd, valueToAdd) {
+    let newOrder = [...this.state.order];
+    // for (let i = 0; i < newOrder.length; i++) {
+    //   if (newOrder[i].name === optionToAdd) {
+    //     newOrder[i].count++;
+    //   }
+    // }
+    console.log("hola");
+    this.setState({ order: this.state.order.concat([{ name: optionToAdd }]) });
+  }
+
   addOrder = e => {
     e.preventDefault();
+    this.setState({
+      id: "",
+      waiter: "",
+      client: "",
+      statusNotReady: true,
+      createdAt: "",
+      order: []
+    });
+
+    let idClient = moment(new Date()).calendar() + this.state.client;
+    let data = {
+      id: idClient,
+      waiter: this.state.waiter,
+      client: this.state.client,
+      statusNotReady: true,
+      createdAt: moment(Date.now()).calendar(),
+      order: []
+    };
     const db = firebase.firestore();
     db.settings({
       timestampsInSnapshots: true
     });
-    db.collection("order").add({
-      waiter: this.state.waiter,
-      client: this.state.client
+    db.collection("order")
+      .doc(idClient)
+      .set(data)
+      .then(() => {
+        this.readOrder();
+      });
+
+    console.log("Form was submitted");
+  };
+
+  readOrder = e => {
+    console.log("leer orden");
+    const db = firebase.firestore();
+    db.settings({
+      timestampsInSnapshots: true
     });
-    this.setState({
+    db.collection("order")
+      .where("statusNotReady", "==", true)
+      .get()
+      .then(snapshot => {
+        console.log(snapshot.docs);
+        snapshot.docs.forEach(order => {
+          console.log(order.data());
+        });
+      });
+  };
+
+  clearOrder() {
+    this.state({
       waiter: "",
       client: ""
     });
-    console.log("Form was submitted");
-  };
-  //el handleClick y el handleSubmit se llama enlazar eventos conectando la accion del usuario c on los componentes del React
-  //se ve la accion que esta realizando el usuario tan pronto escribe
-  // saveOrder() {
-  //   this.setState({
-  //     loading: true
-  //   });
-  //   let idClient = this.state.client + Date.now();
-  //   let data = {
-  //     id: idClient,
-  //     client: this.state.client,
-  //     list: this.state.list,
-  //     time: Date.now()
-  //   };
+  }
 
-  //   db.collection("orders")
-  //     .doc(idClient)
-  //     .set(data)
-  //     .then(() => {
-  //       this.setState({
-  //         loading: false
-  //       });
-  //     });
-  // }
   render() {
+    // this.props.data.map(e => (
+    //   <div key={e.data.id}>
+    //     <p>{e.data.createdAt}</p>
+    //     <p>{"Client: " + e.data.client}</p>
+    //     <p>{"Waiter: " + e.data.waiter}</p>
+    //     <div className="template-order">
+    //       <button className="btn-order-template" onClick={console.log("ready")}>
+    //         Ready
+    //       </button>
+    //     </div>
+    //   </div>
+    // ));
+
     return (
       <div className="lead">
         <div className="form-group">
-          <div className="row1">
-            <form onSubmit={this.addOrder} className="form-group">
-              <input
+          <form onSubmit={this.addOrder} className="form-group">
+            <input
               onChange={this.handleInput}
               type="text"
               name="waiter"
               placeholder="Waiter"
               value={this.state.waiter}
-               />
-               <input
+            />
+            <input
               onChange={this.handleInput}
               type="text"
               name="client"
@@ -93,11 +126,16 @@ class OrderMenu extends React.Component {
               value={this.state.client}
             />
           </form>
-          <a href="/order/menu" className="sendKitchen btn btn-primary">
-    Send Kitchen
-    </a>
-          <div></div>
-          </div>
+          <ul>Order</ul>
+          <button onClick={this.addOrder} className="btn btn-primary">
+            Send
+          </button>
+          <button onClick={this.clearOrder} className="btn btn-primary">
+            Clear
+          </button>
+          <button onClick={this.readOrder} className="btn btn-primary">
+            Read
+          </button>
         </div>
       </div>
     );
