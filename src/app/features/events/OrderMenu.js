@@ -24,16 +24,16 @@ class OrderMenu extends React.Component {
     });
   };
 
-  addToList(optionToAdd, valueToAdd) {
-    let newOrder = [...this.state.order];
-    // for (let i = 0; i < newOrder.length; i++) {
-    //   if (newOrder[i].name === optionToAdd) {
-    //     newOrder[i].count++;
-    //   }
-    // }
-    console.log("hola");
-    this.setState({ order: this.state.order.concat([{ name: optionToAdd }]) });
-  }
+  // addToList(optionToAdd, valueToAdd) {
+  //   let newOrder = [...this.state.order];
+  //   // for (let i = 0; i < newOrder.length; i++) {
+  //   //   if (newOrder[i].name === optionToAdd) {
+  //   //     newOrder[i].count++;
+  //   //   }
+  //   // }
+  //   console.log("hola");
+  //   this.setState({ order: this.state.order.concat([{ name: optionToAdd }]) });
+  // }
 
   addOrder = e => {
     e.preventDefault();
@@ -110,32 +110,34 @@ class OrderMenu extends React.Component {
     return (
       <div className="lead">
         <div className="form-group">
-          <form onSubmit={this.addOrder} className="form-group">
-            <input
-              onChange={this.handleInput}
-              type="text"
-              name="waiter"
-              placeholder="Waiter"
-              value={this.state.waiter}
-            />
-            <input
-              onChange={this.handleInput}
-              type="text"
-              name="client"
-              placeholder="Client"
-              value={this.state.client}
-            />
-          </form>
-          <ul>Order</ul>
-          <button onClick={this.addOrder} className="btn btn-primary">
-            Send
-          </button>
-          <button onClick={this.clearOrder} className="btn btn-primary">
-            Clear
-          </button>
-          <button onClick={this.readOrder} className="btn btn-primary">
-            Read
-          </button>
+          <div className="row1">
+            <form onSubmit={this.addOrder} className="form-group">
+              <input
+                onChange={this.handleInput}
+                type="text"
+                name="waiter"
+                placeholder="Waiter"
+                value={this.state.waiter}
+              />
+              <input
+                onChange={this.handleInput}
+                type="text"
+                name="client"
+                placeholder="Client"
+                value={this.state.client}
+              />
+            </form>
+            <ul>Order</ul>
+            <button onClick={this.addOrder} className="btn btn-primary">
+              Send
+            </button>
+            <button onClick={this.clearOrder} className="btn btn-primary">
+              Clear
+            </button>
+            <button onClick={this.readOrder} className="btn btn-primary">
+              Read
+            </button>
+          </div>
         </div>
       </div>
     );

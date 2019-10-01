@@ -1,7 +1,11 @@
 import React from "react";
 // import "./App.css";
-import { Menu } from "../../../data/menu.json";
+import  {Menu}  from "../../../data/menu.json";
 import "bootstrap/dist/css/bootstrap.css";
+
+
+
+
 // import Img from "../../img";
 class Drinks extends React.Component {
   constructor(props) {
@@ -19,17 +23,19 @@ class Drinks extends React.Component {
             {Menu.Coffee.map(btn => (
               <button
                 onClick={() => this.props.add(btn.value, btn.name)}
-                class="main-button"
-              >
-                {btn.name}
+                className="main-button"> 
+                 <img src={btn.img}></img>
+              <div><p>{btn.name}</p></div>  
+              <div><p>${btn.value}</p></div>
               </button>
             ))}
             {Menu.Juice.map(btn => (
               <button
                 onClick={() => this.props.add(btn.value, btn.name)}
-                class="main-button"
-              >
-                {btn.name}
+                className="main-button">
+               <img src={btn.img}></img>
+              <div><p>{btn.name}</p></div>  
+              <div><p>${btn.value}</p></div>
               </button>
             ))}
 
@@ -37,14 +43,18 @@ class Drinks extends React.Component {
             {Menu.Water.map(btn => (
               <button
                 onClick={() => this.props.add(btn.value, btn.name)}
-                class="main-button"
-              >
-                {btn.name}
-                <img src={btn.img} alt="icon"></img>
+                className="main-button">
+                <img src={btn.img} alt="icon-water"></img>
+              <div><p>{btn.name}</p></div>  
+              <div><p>${btn.value}</p></div>
               </button>
             ))}
             {Menu.Soda.map(btn => (
-              <button class="main-button">{btn.name}</button>
+              <button className="main-button">
+               <img src={btn.img} alt="icon-soda"></img>
+              <div><p>{btn.name}</p></div>  
+              <div><p>${btn.value}</p></div>
+              </button>
             ))}
           </div>
         </div>

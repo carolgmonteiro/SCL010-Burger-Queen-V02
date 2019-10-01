@@ -1,32 +1,30 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-// import NavBarGeneral from "./features/nav/NavBarGeneral";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Drinks from "../menu/Drinks";
-import Food from "../menu/Food";
+/*import NavBarGeneral from "./features/nav/NavBarGeneral";*/
+
+
 
 function NavBarMenu() {
   return (
-    <Router>
-      <div className="lead">
-        <ul className="navbar navbar-dark bg-dark">
-          <a href="/drinks">
-            <Link to="/drinks" className="text-white">
-              Drinks
-            </Link>
-          </a>
-
-          <a href="/main">
-            <Link to="/main" className="text-white">
-              Food
-            </Link>
-          </a>
-        </ul>
-
-        <Route exact path="/drinks" component={Drinks} />
-        <Route path="/main" component={Food} />
+    <div class="row">
+      <div class="col-xs-2 col-md-2">
+        <img src={require('../../../../src/img/LOGO_BURGER_QUEEN-02.png')}/>
       </div>
-    </Router>
+      <div class="col-xs-4 col-md-4"></div>      
+      <div class="col-xs-2 col-md-2">
+        <a href="/menu">Menu</a>
+
+      </div>
+      <div class="col-xs-2 col-md-2">
+        <a href="/kitchen">Kitchen</a>
+
+      </div>
+      <div class="col-xs-2 col-md-2">
+        <a href="/resume">Resume</a>
+      </div>      
+
+
+    </div>
   );
 }
 

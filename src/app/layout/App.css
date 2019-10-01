@@ -29,3 +29,50 @@ display: flex;
 .container2 {
 	margin-left: 200px;
 }
+
+.main-button{
+  outline: none;
+  background-color: white;
+  border:none;
+}
+.lead{
+  background-color: white;
+}
+
+.burger-button{
+  display: flex;
+
+}
+.line{
+  background-color: #F72C25;
+  height: 2px;
+}
+
+.orderKitchen-container {
+
+}
+
+.Order-list {
+
+}
+
+.Order-container {
+
+	
+}
+
+.row, .row1 {
+padding-top: 5%;
+margin-left: 50%;
+
+}
+
+.ShowMenu {
+  
+}
+
+.TabFoodDrinks {
+  margin-left: 5%;
+}
+
+
