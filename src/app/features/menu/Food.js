@@ -4,29 +4,6 @@ import { Menu } from "../../../data/menu.json";
 
 
 class Food extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: " ",
-      value: " ",
-      watch: false,
-      watchfood: false,
-      watchliquids: false,
-      data: props.data,
-    };
-    this.onClickToAdd = this.onClickToAdd.bind(this);
-
-  }
-
-  onClickToAdd(props){
-      this.setState({name: this.state.name.concat("Sandwich ham & cheese"), value: this.state.value});
-  console.log("onclicktoadd", this.state.name, this.state.value)
-
-  }
-
-  componentDidMount(props) {
-   /* console.log(this.props.name)*/
-  }
 
 
 
@@ -35,7 +12,7 @@ class Food extends React.Component {
     return (
 
       <div className="col-md-8">
-      {this.state.name}
+      
         <div>
           <div>
       <div className="line"></div>
@@ -43,7 +20,7 @@ class Food extends React.Component {
             
             {Menu.Sandwich.map((btn) => (
             <button key = {btn}
-                onClick={ this.onClickToAdd.bind(this)  }
+                // onClick={ this.onClickToAdd.bind(this)  }
                 className="main-button">
               <div><p>{btn.name}</p></div>  
               <div><p>${btn.value}</p></div>
@@ -66,7 +43,7 @@ class Food extends React.Component {
             <div className="burger-button">
             {Menu.Double_Burger.map((btn, i ) => (
               <button key = {i}
-                onClick={ this.onClickToAdd.bind(this)  }
+                 // onClick={ }
                 className="main-button">
                 <img src={btn.img}></img>
                 <div><p>{btn.name}</p></div>  
@@ -99,5 +76,6 @@ class Food extends React.Component {
     );
   }
 }
+
 // onClick={() => this.props.add(btn.value, btn.name)}
 export default Food;
