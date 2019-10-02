@@ -30,10 +30,7 @@ class Kitchen extends React.Component {
   render() {
     return (
       <div className="lead">
-        <h4>kitchen</h4>
-        <button onClick={this.readOrder} className="btn btn-primary">
-          Read
-        </button>
+        <h4>The Kitchen is Comming Soon on November 2019</h4>
       </div>
     );
   }

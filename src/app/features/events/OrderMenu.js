@@ -1,6 +1,7 @@
 import React from "react";
 import firebase from "../../../data/firebase";
 import moment from "moment";
+import { Button } from "reactstrap";
 
 class OrderMenu extends React.Component {
   constructor(props) {
@@ -109,16 +110,15 @@ class OrderMenu extends React.Component {
     return (
       <div className="col-xs-12 col-md-12">
         <form onSubmit={this.addOrder} className="form-group">
-          <label>Waiter: </label>
           <input
+            className="inputFormulary"
             onChange={this.handleInput}
             type="text"
             name="waiter"
             placeholder="Waiter"
             value={this.state.waiter}
           />
-          <hr />
-          <label>Client: </label>
+
           <input
             className="inputFormulary"
             onChange={this.handleInput}
@@ -127,19 +127,25 @@ class OrderMenu extends React.Component {
             placeholder="Client"
             value={this.state.client}
           />
-          <hr />
-          <br />
         </form>
 
-        <ul>Order</ul>
-        <button onClick={this.addOrder} className="btn btn-primary">
+        <h6>Order</h6>
+        <div className="line"></div>
+        <div className="orderList">
+          <p>order list here</p>
+        </div>
+        <div>
+          <h6>Total</h6>
+          <h6>$0,00</h6>
+        </div>
+        <div className="line"></div>
+        <br />
+
+        <button onClick={this.addOrder} className="actionButtonSend">
           Send
         </button>
-        <button onClick={this.clearOrder} className="btn btn-primary">
+        <button onClick={this.clearOrder} className="actionButtonClear">
           Clear
-        </button>
-        <button onClick={this.readOrder} className="btn btn-primary">
-          Read
         </button>
       </div>
     );

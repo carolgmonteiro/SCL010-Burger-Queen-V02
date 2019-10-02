@@ -1,15 +1,18 @@
 import React from "react";
-// import '../App.css';
 import "bootstrap/dist/css/bootstrap.css";
 
-function Resume() {
-  const getContent = () => {
-    return "Resume";
-  };
+class Resume extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-  let content = getContent();
-
-  return <span> {content} </span>;
+  render() {
+    return (
+      <div className="lead">
+        <h4>The Resume is Comming Soon on November 2019</h4>
+      </div>
+    );
+  }
 }
 
 export default Resume;

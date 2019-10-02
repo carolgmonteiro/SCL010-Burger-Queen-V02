@@ -5,39 +5,51 @@ import Resume from "../features/dashboard/Resume";
 import Menu from "../features/dashboard/Menu";
 import "../../app/layout/App.css";
 import { Row } from "reactstrap";
-// import OrderMenu from '../../app/features/events/OrderMenu.js'
-// import OrderKitchen from '../../app/features/events/OrderKitchen.js'
-// import NavbarGeneral from '../../app/features/nav/NavbarGeneral.js'
-// import NotFound from "../../NotFound.js";
+import { Col } from "reactstrap";
+
 class App extends Component {
   render() {
     return (
       <Router>
         <Row>
-          <div className="col-xs-2 col-md-2">
+          <Col>
             <img
-              src={require("../../../src/img/LOGO_BURGER_QUEEN-02.png")}
+              src={require("../../../src/img/LOGO BURGER QUEEN-04.svg")}
               alt="logo"
             />
-          </div>
-
-          <div className="col-xs-4 col-md-4"></div>
-          <div className="col-xs-2 col-md-2">
-            <Link to={"/menu"} className="nav-link">
-              {" "}
-              Menu{" "}
+          </Col>
+          <Col></Col>
+          <Col></Col>
+          <Col className="nav-link">
+            <Link to={"/menu"}>
+              <div className="menu-icons">
+                <img
+                  src={require("../../../src/img/icon-menu-yellow.svg")}
+                  alt="logo"
+                />
+              </div>
             </Link>
-          </div>
-          <div className="col-xs-2 col-md-2">
-            <Link to={"/kitchen"} className="nav-link">
-              Kitchen
+          </Col>
+          <Col>
+            <Link to={"/kitchen"}>
+              <div className="menu-icons">
+                <img
+                  src={require("../../../src/img/icon-kitchen-yellow.svg")}
+                  alt="logo"
+                />
+              </div>
             </Link>
-          </div>
-          <div className="col-xs-2 col-md-2">
-            <Link to={"/resume"} className="nav-link">
-              Resume
+          </Col>
+          <Col>
+            <Link to={"/resume"}>
+              <div className="menu-icons">
+                <img
+                  src={require("../../../src/img/icon-resume-yellow.svg")}
+                  alt="logo"
+                />
+              </div>
             </Link>
-          </div>
+          </Col>
         </Row>
 
         <Switch>

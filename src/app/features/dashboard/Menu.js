@@ -6,8 +6,6 @@ import Drinks from "../menu/Drinks";
 import Food from "../menu/Food";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import drinksIcon from "../../../img/menu_drink_icon.svg";
-import foodIcon from "../../../img/menu_food_icon.svg";
 import firebase from "../../../data/firebase";
 import OrderMenu from "../../../app/features/events/OrderMenu.js";
 
@@ -28,33 +26,28 @@ class Menu extends React.Component {
     return (
       <div className="row">
         <div className="col-md-6 col-md-offset-6">
-          <Tabs>
+          <Tabs className="ShowMenu">
             <TabList>
               <Tab>
                 <img
-                  src={require("../../../../src/img/menu_food_icon.svg")}
-                  height="50"
-                  width="50"
+                  src={require("../../../../src/img/icon-menu-drinks.svg")}
+                  height="80"
+                  width="80"
                 />
-                <br />
-                Food
               </Tab>
               <Tab>
                 <img
-                  src={require("../../../../src/img/natural_juice.svg")}
-                  height="50"
-                  width="50"
+                  src={require("../../../../src/img/icon-menu-food.svg")}
+                  height="80"
+                  width="80"
                 />
-                <br />
-                Drinks
               </Tab>
             </TabList>
-
-            <TabPanel>
-              <Food clickToAdd={this.onClickAdd.bind(this)} />
-            </TabPanel>
             <TabPanel>
               <Drinks />
+            </TabPanel>
+            <TabPanel>
+              <Food clickToAdd={this.onClickAdd.bind(this)} />
             </TabPanel>
           </Tabs>
         </div>

@@ -42,11 +42,12 @@ class Food extends React.Component {
                 onClick={this.onClickToAdd.bind(this)}
                 className="main-button"
               >
+                <img src={btn.img}></img>
                 <div>
                   <p>{btn.name}</p>
                 </div>
                 <div>
-                  <p>${btn.value}</p>
+                  <p className="item-price">${btn.value}</p>
                 </div>
               </button>
             ))}
@@ -61,11 +62,12 @@ class Food extends React.Component {
                     <p>{btn.name}</p>
                   </div>
                   <div>
-                    <p>${btn.value}</p>
+                    <p className="item-price">${btn.value}</p>
                   </div>
                 </button>
               ))}
             </div>
+
             <div className="burger-button">
               {Menu.Double_Burger.map((btn, i) => (
                 <button
@@ -78,13 +80,15 @@ class Food extends React.Component {
                     <p>{btn.name}</p>
                   </div>
                   <div>
-                    <p>${btn.value}</p>
+                    <p className="item-price">${btn.value}</p>
                   </div>
                 </button>
               ))}
             </div>
           </div>
           <div className="item-btn-row">
+            <h6>Toppings</h6>
+            <div className="line"></div>
             {Menu.Toppings.map(btn => (
               <button className="main-button">
                 <img src={btn.img}></img>
@@ -92,20 +96,22 @@ class Food extends React.Component {
                   <p>{btn.name}</p>
                 </div>
                 <div>
-                  <p>${btn.value}</p>
+                  <p className="item-price">${btn.value}</p>
                 </div>
               </button>
             ))}
           </div>
           <div className="item-btn-row">
-            {Menu.Side_Diches.map(btn => (
+            <h6>Side Dishes</h6>
+            <div className="line"></div>
+            {Menu.Side_Dishes.map(btn => (
               <button className="main-button">
                 <img src={btn.img}></img>
                 <div>
                   <p>{btn.name}</p>
                 </div>
                 <div>
-                  <p>${btn.value}</p>
+                  <p className="item-price">${btn.value}</p>
                 </div>
               </button>
             ))}

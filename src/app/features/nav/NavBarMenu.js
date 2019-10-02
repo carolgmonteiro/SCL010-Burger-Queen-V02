@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-/*import NavBarGeneral from "./features/nav/NavBarGeneral";*/
 
 function NavBarMenu() {
   return (

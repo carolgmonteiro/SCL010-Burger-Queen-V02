@@ -34,7 +34,7 @@ class Drinks extends React.Component {
                     <p>{btn.name}</p>
                   </div>
                   <div>
-                    <p>${btn.value}</p>
+                    <p className="item-price">${btn.value}</p>
                   </div>
                 </button>
               ))}
@@ -48,7 +48,7 @@ class Drinks extends React.Component {
                     <p>{btn.name}</p>
                   </div>
                   <div>
-                    <p>${btn.value}</p>
+                    <p className="item-price">${btn.value}</p>
                   </div>
                 </button>
               ))}
@@ -66,7 +66,7 @@ class Drinks extends React.Component {
                     <p>{btn.name}</p>
                   </div>
                   <div>
-                    <p>${btn.value}</p>
+                    <p className="item-price">${btn.value}</p>
                   </div>
                 </button>
               ))}
@@ -77,7 +77,7 @@ class Drinks extends React.Component {
                     <p>{btn.name}</p>
                   </div>
                   <div>
-                    <p>${btn.value}</p>
+                    <p className="item-price">${btn.value}</p>
                   </div>
                 </button>
               ))}
