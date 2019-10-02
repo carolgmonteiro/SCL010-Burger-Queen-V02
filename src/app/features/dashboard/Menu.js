@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+
 import Drinks from "../menu/Drinks";
 import Food from "../menu/Food";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";

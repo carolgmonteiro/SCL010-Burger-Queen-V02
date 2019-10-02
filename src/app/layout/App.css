@@ -150,6 +150,7 @@ li {
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
+
 .lead {
   background-color: #ece6e4;
   height: 1000px;
@@ -202,7 +203,7 @@ p {
   background: #ffffff;
 } */
 .orderList {
-  height: 200px;
+  height: 400px;
   padding-top: 3%;
 }
 
@@ -310,7 +311,7 @@ input:checked + .slider:before {
 }
 
 .react-tabs__tab {
-  display: inline-block;
+  display: flex;
   border: none;
   border-bottom: none;
   bottom: -1px;

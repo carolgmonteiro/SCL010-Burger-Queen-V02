@@ -1,5 +1,6 @@
 import React from "react";
 import firebase from "../../../data/firebase";
+import "bootstrap/dist/css/bootstrap.css";
 import moment from "moment";
 import OrderList from "../events/OrderList";
 
@@ -9,7 +10,8 @@ class OrderMenu extends React.Component {
     this.state = {
       waiter: "",
       client: "",
-      order: []
+      list: [],
+      value: ""
     };
     this.addOrder = this.addOrder.bind(this);
   }
@@ -34,7 +36,32 @@ class OrderMenu extends React.Component {
     console.log("hola");
     this.setState({ order: this.state.order.concat([{ name: optionToAdd }]) });
   }
-
+  onChangeValue = event => {
+    this.setState({ value: event.target.value });
+  };
+  onCleanArray = () => {
+    this.setState({ list: [] });
+  };
+  onResetArray = () => {
+    this.setState({ list: [1, 2, 3] });
+  };
+  onAddItem = () => {
+    this.setState(state => {
+      const list = [...state.list, state.value];
+      return {
+        list,
+        value: ""
+      };
+    });
+  };
+  onRemoveItem = i => {
+    this.setState(state => {
+      const list = state.list.filter((item, j) => i !== j);
+      return {
+        list
+      };
+    });
+  };
   addOrder = e => {
     e.preventDefault();
     this.setState({
@@ -135,6 +162,37 @@ class OrderMenu extends React.Component {
           <div className="line"></div>
           <div className="orderList">
             <OrderList></OrderList>
+            <input
+              type="text"
+              value={this.state.value}
+              onChange={this.onChangeValue}
+            />
+            <button
+              type="button"
+              onClick={this.onAddItem}
+              disabled={!this.state.value}
+            >
+              Add
+            </button>
+            <ul>
+              {this.state.list.map((item, index) => (
+                <li key={item}>
+                  The person is {item} years old.
+                  <button
+                    type="button"
+                    onClick={() => this.onRemoveItem(index)}
+                  >
+                    Remove
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <button type="button" onClick={this.onCleanArray}>
+              Clear Array
+            </button>
+            <button type="button" onClick={this.onResetArray}>
+              Reset Array
+            </button>
           </div>
           <div className="box-value">
             <h6>Total $</h6>
