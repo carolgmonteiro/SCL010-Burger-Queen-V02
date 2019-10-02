@@ -3,6 +3,7 @@ import { Menu } from "../../../data/menu.json";
 import { Col } from "reactstrap";
 
 class Food extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -28,10 +29,14 @@ class Food extends React.Component {
     /* console.log(this.props.name)*/
   }
 
+
   render() {
     return (
       <Col>
         {this.state.name}
+
+
+      <div className="col-md-8">
         <div>
           <div>
             <h6>Breakfast</h6>
@@ -49,6 +54,7 @@ class Food extends React.Component {
                 <div>
                   <p className="item-price">${btn.value}</p>
                 </div>
+
               </button>
             ))}
 
@@ -84,6 +90,7 @@ class Food extends React.Component {
                   </div>
                 </button>
               ))}
+
             </div>
           </div>
           <div className="item-btn-row">
@@ -121,5 +128,6 @@ class Food extends React.Component {
     );
   }
 }
+
 // onClick={() => this.props.add(btn.value, btn.name)}
 export default Food;

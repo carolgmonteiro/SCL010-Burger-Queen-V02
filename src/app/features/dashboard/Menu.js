@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-
 import Drinks from "../menu/Drinks";
 import Food from "../menu/Food";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
@@ -19,7 +18,17 @@ class Menu extends React.Component {
       name: name,
       value: value
     });
-  }
+  };
+
+
+  onRemoveItem = i => {
+    this.setState(state => {
+      const list = state.list.filter((item, j) => i !== j);
+      return {
+        list,
+      };
+    });
+  };
 
   render() {
     return (
@@ -59,8 +68,12 @@ class Menu extends React.Component {
         </div>
       </div>
     );
+
   }
 }
+
+
+
 
 export default Menu;
 

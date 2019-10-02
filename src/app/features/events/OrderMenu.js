@@ -3,11 +3,14 @@ import firebase from "../../../data/firebase";
 import "bootstrap/dist/css/bootstrap.css";
 import moment from "moment";
 import OrderList from "../events/OrderList";
-
+import Drinks from "../menu/Drinks";
+import Food from "../menu/Food";
 class OrderMenu extends React.Component {
+ 
   constructor(props) {
     super(props);
     this.state = {
+
       waiter: "",
       client: "",
       list: [],
@@ -121,21 +124,15 @@ class OrderMenu extends React.Component {
   //   });
   // }
 
-  render() {
-    // this.props.data.map(e => (
-    //   <div key={e.data.id}>
-    //     <p>{e.data.createdAt}</p>
-    //     <p>{"Client: " + e.data.client}</p>
-    //     <p>{"Waiter: " + e.data.waiter}</p>
-    //     <div className="template-order">
-    //       <button className="btn-order-template" onClick={console.log("ready")}>
-    //         Ready
-    //       </button>
-    //     </div>
-    //   </div>
-    // ));
 
+      menu: ['menu1', 'menu2', 'menu3', 'menu4', 'menu5', 'menu6'],
+    };
+  }
+
+  render() {
+    const { menu } = this.state;
     return (
+
       <div className="order-menu-container">
         <div className="col-xs-12 col-md-12">
           <form onSubmit={this.addOrder} className="form-group">
@@ -212,8 +209,11 @@ class OrderMenu extends React.Component {
           </button>
         </div>
       </div>
+
+
     );
   }
 }
 
 export default OrderMenu;
+
