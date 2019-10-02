@@ -14,11 +14,11 @@ h5 {
 h6 {
   color: #f72c25;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
 }
 p {
   color: #4f1a0f;
-  font-size: 16px;
+  font-size: 18px;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -32,7 +32,7 @@ a {
 
 li {
   list-style-type: none;
-  font-size: 14px;
+  font-size: 18px;
   color: #4f1a0f;
 }
 
@@ -51,7 +51,7 @@ li {
 
 ::placeholder {
   color: #f72c25;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .menu-icons {
@@ -208,21 +208,15 @@ p {
 
 .Order-container {
   width: 100%;
+  padding-right: 2%;
 }
 
 .row,
 .row1 {
-  padding: 0;
   padding-left: 2%;
-  /* padding-top: 5%; */
-  /* margin-left: 50%; */
 }
 .row2 {
   padding-right: 2%;
-}
-
-.ShowMenu {
-  background-color: #ece6e4;
 }
 
 .TabFoodDrinks {
@@ -298,4 +292,37 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.react-tabs__tab--selected {
+  background: #ece6e4 !important;
+  color: black;
+}
+
+.react-tabs__tab {
+  display: inline-block;
+  border: none;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  width: 50%;
+  background: #ffff;
+  justify-content: center !important;
+}
+
+.ShowMenu {
+  background-color: #ece6e4;
 }

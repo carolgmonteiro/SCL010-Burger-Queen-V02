@@ -26,8 +26,8 @@ class Menu extends React.Component {
         <div className="row">
           <div className="col-md-6 col-md-offset-6">
             <Tabs className="ShowMenu">
-              <TabList>
-                <Tab>
+              <TabList className="react-tabs__tab-list">
+                <Tab className="react-tabs__tab">
                   <img
                     src={require("../../../../src/img/icon-menu-drinks.svg")}
                     height="80"
@@ -35,7 +35,7 @@ class Menu extends React.Component {
                     alt="icon"
                   />
                 </Tab>
-                <Tab>
+                <Tab className="react-tabs__tab">
                   <img
                     src={require("../../../../src/img/icon-menu-food.svg")}
                     height="80"

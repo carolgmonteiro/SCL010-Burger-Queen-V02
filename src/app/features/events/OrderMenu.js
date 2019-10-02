@@ -149,6 +149,9 @@ class OrderMenu extends React.Component {
           <button onClick={this.clearOrder} className="actionButtonClear">
             Clear Order
           </button>
+          <button onClick={this.clearOrder} className="actionButtonClear">
+            Reset
+          </button>
         </div>
       </div>
     );
