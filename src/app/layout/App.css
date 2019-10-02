@@ -75,4 +75,14 @@ margin-left: 50%;
   margin-left: 5%;
 }
 
+.Item-Price, .Item-Price2{
+  padding-left: 5%;
+  display: flex;
+}
+
+.Item-Price2{
+  padding-left: 20%;
+  
+}
+
 

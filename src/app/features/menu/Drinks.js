@@ -3,9 +3,6 @@ import React from "react";
 import  {Menu}  from "../../../data/menu.json";
 import "bootstrap/dist/css/bootstrap.css";
 
-
-
-
 // import Img from "../../img";
 class Drinks extends React.Component {
   constructor(props) {

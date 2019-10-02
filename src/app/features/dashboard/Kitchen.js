@@ -1,7 +1,5 @@
 import React from "react";
-// import "../App.css";
 import "bootstrap/dist/css/bootstrap.css";
-//import OrderKitchen from "../events/OrderKitchen";
 import firebase from "../../../data/firebase";
 
 class Kitchen extends React.Component {
