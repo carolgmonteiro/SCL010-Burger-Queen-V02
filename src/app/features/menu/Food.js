@@ -1,6 +1,6 @@
 import React from "react";
-// import "./App.css";
 import { Menu } from "../../../data/menu.json";
+import { Col } from "reactstrap";
 
 class Food extends React.Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class Food extends React.Component {
 
   render() {
     return (
-      <div className="col-md-8">
+      <Col>
         {this.state.name}
         <div>
           <div>
@@ -42,7 +42,7 @@ class Food extends React.Component {
                 onClick={this.onClickToAdd.bind(this)}
                 className="main-button"
               >
-                <img src={btn.img}></img>
+                <img src={btn.img} alt="icon"></img>
                 <div>
                   <p>{btn.name}</p>
                 </div>
@@ -57,7 +57,7 @@ class Food extends React.Component {
             <div className="burger-button">
               {Menu.Simple_Burger.map(btn => (
                 <button className="main-button">
-                  <img src={btn.img}></img>
+                  <img src={btn.img} alt="icon"></img>
                   <div>
                     <p>{btn.name}</p>
                   </div>
@@ -75,7 +75,7 @@ class Food extends React.Component {
                   onClick={this.onClickToAdd.bind(this)}
                   className="main-button"
                 >
-                  <img src={btn.img}></img>
+                  <img src={btn.img} alt="icon"></img>
                   <div>
                     <p>{btn.name}</p>
                   </div>
@@ -91,7 +91,7 @@ class Food extends React.Component {
             <div className="line"></div>
             {Menu.Toppings.map(btn => (
               <button className="main-button">
-                <img src={btn.img}></img>
+                <img src={btn.img} alt="icon"></img>
                 <div>
                   <p>{btn.name}</p>
                 </div>
@@ -106,7 +106,7 @@ class Food extends React.Component {
             <div className="line"></div>
             {Menu.Side_Dishes.map(btn => (
               <button className="main-button">
-                <img src={btn.img}></img>
+                <img src={btn.img} alt="icon"></img>
                 <div>
                   <p>{btn.name}</p>
                 </div>
@@ -117,7 +117,7 @@ class Food extends React.Component {
             ))}
           </div>
         </div>
-      </div>
+      </Col>
     );
   }
 }

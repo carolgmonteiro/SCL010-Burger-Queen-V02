@@ -1,7 +1,7 @@
 import React from "react";
 import firebase from "../../../data/firebase";
 import moment from "moment";
-import { Button } from "reactstrap";
+import OrderList from "../events/OrderList";
 
 class OrderMenu extends React.Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class OrderMenu extends React.Component {
   };
 
   addToList(optionToAdd, valueToAdd) {
-    let newOrder = [...this.state.order];
+    // let newOrder = [...this.state.order];
     // for (let i = 0; i < newOrder.length; i++) {
     //   if (newOrder[i].name === optionToAdd) {
     //     newOrder[i].count++;
@@ -46,13 +46,14 @@ class OrderMenu extends React.Component {
       order: []
     });
 
-    let idClient = moment(new Date()).calendar() + this.state.client;
+    let idClient =
+      moment(Date.now()).format("MMMM Do YYYY, h:mm a") + this.state.client;
     let data = {
       id: idClient,
       waiter: this.state.waiter,
       client: this.state.client,
       statusNotReady: true,
-      createdAt: moment(Date.now()).calendar(),
+      createdAt: moment(Date.now()).format("MMMM Do YYYY, h:mm a"),
       order: []
     };
     const db = firebase.firestore();
@@ -108,45 +109,47 @@ class OrderMenu extends React.Component {
     // ));
 
     return (
-      <div className="col-xs-12 col-md-12">
-        <form onSubmit={this.addOrder} className="form-group">
-          <input
-            className="inputFormulary"
-            onChange={this.handleInput}
-            type="text"
-            name="waiter"
-            placeholder="Waiter"
-            value={this.state.waiter}
-          />
+      <div className="order-menu-container">
+        <div className="col-xs-12 col-md-12">
+          <form onSubmit={this.addOrder} className="form-group">
+            <input
+              className="inputFormulary"
+              onChange={this.handleInput}
+              type="text"
+              name="waiter"
+              placeholder="Waiter"
+              value={this.state.waiter}
+            />
 
-          <input
-            className="inputFormulary"
-            onChange={this.handleInput}
-            type="text"
-            name="client"
-            placeholder="Client"
-            value={this.state.client}
-          />
-        </form>
+            <input
+              className="inputFormulary"
+              onChange={this.handleInput}
+              type="text"
+              name="client"
+              placeholder="Client"
+              value={this.state.client}
+            />
+          </form>
 
-        <h6>Order</h6>
-        <div className="line"></div>
-        <div className="orderList">
-          <p>order list here</p>
+          <h6>Order</h6>
+          <div className="line"></div>
+          <div className="orderList">
+            <OrderList></OrderList>
+          </div>
+          <div className="box-value">
+            <h6>Total $</h6>
+            <h6>0,00</h6>
+          </div>
+          <div className="line"></div>
+          <br />
+
+          <button onClick={this.addOrder} className="actionButtonSend">
+            Send to the Kitchen
+          </button>
+          <button onClick={this.clearOrder} className="actionButtonClear">
+            Clear Order
+          </button>
         </div>
-        <div>
-          <h6>Total</h6>
-          <h6>$0,00</h6>
-        </div>
-        <div className="line"></div>
-        <br />
-
-        <button onClick={this.addOrder} className="actionButtonSend">
-          Send
-        </button>
-        <button onClick={this.clearOrder} className="actionButtonClear">
-          Clear
-        </button>
       </div>
     );
   }

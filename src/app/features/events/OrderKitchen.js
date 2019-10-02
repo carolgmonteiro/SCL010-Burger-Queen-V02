@@ -2,58 +2,101 @@ import React from "react";
 
 class OrderKitchen extends React.Component {
   render() {
-    return this.props.data.map(e => (
-      <div key={e.data.id}>
-        <p>{e.data.createdAt}</p>
-        <p>{"Client: " + e.data.client}</p>
-        <p>{"Waiter: " + e.data.waiter}</p>
-        <div className="template-order">
-          <button className="btn-order-template" onClick={console.log("ready")}>
-            Ready
-          </button>
+    return (
+      <div className="order-kitchen-card">
+        <h6>Ada Lovelace</h6>
+        <div className="line"></div>
+        <p>Roberto</p>
+        <label className="box-value">
+          <p>02.10.2019</p>
+          <p>at 15:30hrs</p>
+        </label>
+        <div className="line-thin"></div>
+
+        <label className="box-value">
+          <li>American Coffee</li>
+          <li>$500</li>
+        </label>
+        <label className="box-value">
+          <li>Soda 500ml</li>
+          <li>$500</li>
+        </label>
+        <label className="box-value">
+          <li>Simple Burger - Meat</li>
+          <li>$1.500</li>
+        </label>
+        <label className="box-value">
+          <li>Egg</li>
+          <li>$500</li>
+        </label>
+        <label className="box-value">
+          <li>Frensh fries</li>
+          <li>$500</li>
+        </label>
+        <h5>Total $ 3.500</h5>
+        <div className="line-thin"></div>
+        <br />
+        <div className="btn-kitchen">
+          <div className="template-order">
+            <label className="switch">
+              <input type="checkbox" />
+              <span className="slider round"></span>
+              <br />
+            </label>
+            <p>Cooked</p>
+          </div>
+          <div className="template-order">
+            <label className="switch">
+              <input type="checkbox" />
+              <span className="slider round"></span>
+              <br />
+            </label>
+            <p>Delivered</p>
+          </div>
         </div>
       </div>
-    ));
+    );
   }
 }
 
 export default OrderKitchen;
 
+// class OrderKitchen extends React.Component {
+//   render() {
+//     return this.props.data.map(e => (
+//       <div key={e.data.id}>
+//         <p>{e.data.createdAt}</p>
+//         <p>{"Client: " + e.data.client}</p>
+//         <p>{"Waiter: " + e.data.waiter}</p>
+//         <div className="template-order">
+//           <button className="btn-order-template" onClick={console.log("ready")}>
+//             Ready
+//           </button>
+//         </div>
+//       </div>
+//     ));
+//   }
+// }
 
+// class OrderKitchen extends Component {
 
+//   render() {
+//     return this.props.data.map(e => (
+//       <div key={e.data.id}>
+//         <p>{e.data.createdAt}</p>
+//         <p>{"Client: " + e.data.client}</p>
+//         <p>{"Waiter: " + e.data.waiter}</p>
+//         <div className="template-order">
+//           <button className="btn-order-template" onClick={console.log("ready")}>
+//             Ready
+//           </button>
+//         </div>
+//       </div>
+//     ));
+//   }
+// }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*class OrderKitchen extends Component {
-
-  render() {
-    return this.props.data.map(e => (
-      <div key={e.data.id}>
-        <p>{e.data.createdAt}</p>
-        <p>{"Client: " + e.data.client}</p>
-        <p>{"Waiter: " + e.data.waiter}</p>
-        <div className="template-order">
-          <button className="btn-order-template" onClick={console.log("ready")}>
-            Ready
-          </button>
-        </div>
-      </div>
-    ));
-  }
-}
-
-export default OrderKitchen;
+// export default OrderKitchen;
 
 // class OrderKitchen extends React.Component {
 //   constructor(props) {

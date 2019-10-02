@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <Router>
         <Row>
-          <Col>
+          <Col className="logo">
             <img
               src={require("../../../src/img/LOGO BURGER QUEEN-04.svg")}
               alt="logo"
@@ -20,36 +20,38 @@ class App extends Component {
           </Col>
           <Col></Col>
           <Col></Col>
-          <Col className="nav-link">
-            <Link to={"/menu"}>
-              <div className="menu-icons">
-                <img
-                  src={require("../../../src/img/icon-menu-yellow.svg")}
-                  alt="logo"
-                />
-              </div>
-            </Link>
-          </Col>
-          <Col>
-            <Link to={"/kitchen"}>
-              <div className="menu-icons">
-                <img
-                  src={require("../../../src/img/icon-kitchen-yellow.svg")}
-                  alt="logo"
-                />
-              </div>
-            </Link>
-          </Col>
-          <Col>
-            <Link to={"/resume"}>
-              <div className="menu-icons">
-                <img
-                  src={require("../../../src/img/icon-resume-yellow.svg")}
-                  alt="logo"
-                />
-              </div>
-            </Link>
-          </Col>
+          <div className="nav-link">
+            <Col>
+              <Link to={"/menu"}>
+                <div className="menu-icons">
+                  <img
+                    src={require("../../../src/img/icon-menu-yellow.svg")}
+                    alt="logo"
+                  />
+                </div>
+              </Link>
+            </Col>
+            <Col>
+              <Link to={"/kitchen"}>
+                <div className="menu-icons">
+                  <img
+                    src={require("../../../src/img/icon-kitchen-yellow.svg")}
+                    alt="logo"
+                  />
+                </div>
+              </Link>
+            </Col>
+            <Col>
+              <Link to={"/resume"}>
+                <div className="menu-icons">
+                  <img
+                    src={require("../../../src/img/icon-resume-yellow.svg")}
+                    alt="logo"
+                  />
+                </div>
+              </Link>
+            </Col>
+          </div>
         </Row>
 
         <Switch>

@@ -1,7 +1,6 @@
 import React from "react";
-// import "../App.css";
 import "bootstrap/dist/css/bootstrap.css";
-//import OrderKitchen from "../events/OrderKitchen";
+import OrderKitchen from "../events/OrderKitchen";
 import firebase from "../../../data/firebase";
 
 class Kitchen extends React.Component {
@@ -30,7 +29,10 @@ class Kitchen extends React.Component {
   render() {
     return (
       <div className="lead">
-        <h4>The Kitchen is Comming Soon on November 2019</h4>
+        <div className="order-kitchen-container">
+          <OrderKitchen></OrderKitchen>
+          <OrderKitchen></OrderKitchen>
+        </div>
       </div>
     );
   }
