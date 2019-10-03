@@ -159,6 +159,7 @@ class OrderMenu extends React.Component {
                         />
                       </button>
                       <li>{item.name}</li>
+
                     </div>
                     <li>${item.value}</li>
                   </label>
