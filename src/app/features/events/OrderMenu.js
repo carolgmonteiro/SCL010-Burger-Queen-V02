@@ -2,21 +2,22 @@ import React from "react";
 import firebase from "../../../data/firebase";
 import "bootstrap/dist/css/bootstrap.css";
 import moment from "moment";
-import OrderList from "../events/OrderList";
-import Drinks from "../menu/Drinks";
-import Food from "../menu/Food";
-
-
-
+// import OrderList from "../events/OrderList";
 class OrderMenu extends React.Component {
- 
   constructor(props) {
     super(props);
     this.state = {
+      client: "",
+      waiter: "",
       list: [],
       value: "",
       total: 0
     };
+    this.addToList = this.addToList.bind(this);
+    this.onRemoveItem = this.onRemoveItem.bind(this);
+    this.readList = this.readList.bind(this);
+    this.addOrder = this.addOrder.bind(this);
+    this.readOrder = this.readOrder.bind(this);
   }
 
   handleInput = e => {
@@ -30,7 +31,7 @@ class OrderMenu extends React.Component {
   };
 
   addToList(optionToAdd, valueToAdd) {
-    this.setState({ order: this.state.order.concat([{ name: optionToAdd }]) });
+    this.setState({ list: this.state.order.concat([{ name: optionToAdd }]) });
   }
   onChangeValue = event => {
     this.setState({ value: event.target.value });
@@ -60,8 +61,11 @@ class OrderMenu extends React.Component {
   };
 
   readList = () => {
-    console.log(this.props.estado);
-  }
+    console.log(this.props.list);
+  };
+  // readList = () => {
+  //   console.log(this.props.estado);
+  // };
   addOrder = e => {
     e.preventDefault();
     this.setState({
@@ -70,7 +74,7 @@ class OrderMenu extends React.Component {
       client: "",
       statusNotReady: true,
       createdAt: "",
-      order: []
+      list: []
     });
 
     let idClient =
@@ -81,7 +85,7 @@ class OrderMenu extends React.Component {
       client: this.state.client,
       statusNotReady: true,
       createdAt: moment(Date.now()).format("MMMM Do YYYY, h:mm a"),
-      order: []
+      list: []
     };
     const db = firebase.firestore();
     db.settings({
@@ -114,21 +118,8 @@ class OrderMenu extends React.Component {
       });
   };
 
-  // clearOrder() {
-  //   this.state({
-  //     waiter: "",
-  //     client: ""
-  //   });
-  // }
-
-
-
-  
-
   render() {
-    
     return (
-
       <div className="order-menu-container">
         <div className="col-xs-12 col-md-12">
           <form onSubmit={this.addOrder} className="form-group">
@@ -138,7 +129,6 @@ class OrderMenu extends React.Component {
               type="text"
               name="waiter"
               placeholder="Waiter"
-  
             />
 
             <input
@@ -147,51 +137,35 @@ class OrderMenu extends React.Component {
               type="text"
               name="client"
               placeholder="Client"
-
             />
           </form>
 
           <h6>Order</h6>
           <div className="line"></div>
           <div className="orderList">
-            <OrderList></OrderList>
-            
-            <ul >
+            <ul>
               {this.props.estado.map((item, index) => (
-                
-                <li key={item} >
-                               {item.name} {item.value}
-   {this.state.total += item.value  }; 
-
-   
-               <li className="orderList2">
-                 
-        
-         
-
-   
-
-
-                     
-                    <button type="button" 
-                     onClick={() => this.props.remover(index)} >
-                    <div>
-
-
-
-                <img src={require("../../../../src/img/eliminar.png")}
-                    height="20"
-                    width="20"
-                    alt="icon"
-                  />
+                <div key={item}>
+                  <label className="box-value">
+                    <div className="box-value">
+                      <button
+                        className="delete-icon"
+                        type="button"
+                        onClick={() => this.props.remover(index)}
+                      >
+                        <img
+                          src={require("../../../../src/img/delete_button.svg")}
+                          alt="icon"
+                        />
+                      </button>
+                      <li>{item.name}</li>
 
                     </div>
-                    </button>
-                  </li>
-                </li>
+                    <li>${item.value}</li>
+                  </label>
+                </div>
               ))}
             </ul>
-  
           </div>
           <div className="box-value">
             <h6>Total $</h6>
@@ -200,21 +174,97 @@ class OrderMenu extends React.Component {
           <div className="line"></div>
           <br />
 
-          <button onClick={() => this.props.enviar()} className="actionButtonSend">
+          <button onClick={this.addOrder} className="actionButtonSend">
             Send to the Kitchen
           </button>
-          <button onClick={this.clearOrder} className="actionButtonClear">
+          <button onClick={this.onCleanArray} className="actionButtonClear">
             Clear Order
           </button>
-          <button onClick={this.clearOrder} className="actionButtonClear">
+          <button onClick={this.onResetArray} className="actionButtonClear">
             Reset
           </button>
         </div>
       </div>
-
-
     );
   }
 }
 
 export default OrderMenu;
+
+/* <button
+            onClick={() => this.props.enviar()}
+            className="actionButtonSend"
+          >
+            Send to the Kitchen
+          </button> */
+
+// render() {
+//   return (
+//     <div className="order-menu-container">
+//       <div className="col-xs-12 col-md-12">
+//         <form onSubmit={this.addOrder} className="form-group">
+//           <input
+//             className="inputFormulary"
+//             onChange={this.handleInput}
+//             type="text"
+//             name="waiter"
+//             placeholder="Waiter"
+//           />
+
+//           <input
+//             className="inputFormulary"
+//             onChange={this.handleInput}
+//             type="text"
+//             name="client"
+//             placeholder="Client"
+//           />
+//         </form>
+
+//         <h6>Order</h6>
+//         <div className="line"></div>
+//         <div className="orderList">
+
+//           <ul>
+//             {this.props.estado.map((item, index) => (
+//               <li key={item}>
+//                 <li className="orderList2">
+//                   {item.name} {item.value}
+//                   {(this.state.total = item.value + 1)};
+//                   <button
+//                     type="button"
+//                     onClick={() => this.props.remover(index)}
+//                   >
+//                     <div>
+//                       <img
+//                         src={require("../../../../src/img/eliminar.png")}
+//                         height="20"
+//                         width="20"
+//                         alt="icon"
+//                       />
+//                     </div>
+//                   </button>
+//                 </li>
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+//         <div className="box-value">
+//           <h6>Total $</h6>
+//           <h6>{this.state.total}</h6>
+//         </div>
+//         <div className="line"></div>
+//         <br />
+
+//         <button onClick={this.addOrder} className="actionButtonSend">
+//           Send to the Kitchen
+//         </button>
+//         <button onClick={this.clearOrder} className="actionButtonClear">
+//           Clear Order
+//         </button>
+//         <button onClick={this.clearOrder} className="actionButtonClear">
+//           Reset
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }

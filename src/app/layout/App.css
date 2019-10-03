@@ -324,14 +324,6 @@ input:checked + .slider:before {
   justify-content: center !important;
 }
 
-.buttonRemove {
-  display: flex;
-}
-
-.orderList2 {
-margin-left: 0;
-display: flex;
-justify-content: space-between;
-
-
+.ShowMenu {
+  background-color: #ece6e4;
 }
