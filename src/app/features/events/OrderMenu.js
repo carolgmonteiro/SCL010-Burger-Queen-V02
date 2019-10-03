@@ -160,18 +160,12 @@ class OrderMenu extends React.Component {
               {this.props.estado.map((item, index) => (
                 
                 <li key={item} >
-                               {item.name} {item.value}
-   {this.state.total += item.value  }; 
 
-   
+   {this.state.total= item.name += item.value    }; 
+                               {item.name} {item.value}
+
                <li className="orderList2">
                  
-        
-         
-
-   
-
-
                      
                     <button type="button" 
                      onClick={() => this.props.remover(index)} >
