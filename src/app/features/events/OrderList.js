@@ -1,19 +1,20 @@
 import React from "react";
 
 class OrderList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.total = this.total.bind(this);
+  }
   render() {
     return (
       <div>
-        <label className="box-value">
-        
-        </label>
+        <label className="box-value"></label>
       </div>
     );
   }
 }
 
-
-  /*<div className="box-value">
+/*<div className="box-value">
             <button className="delete-icon">
               <img
                 src={require("../../../../src/img/delete_button.svg")}

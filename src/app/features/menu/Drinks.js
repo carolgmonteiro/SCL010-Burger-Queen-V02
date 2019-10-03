@@ -13,9 +13,6 @@ class Drinks extends React.Component {
     // this.resetArray = this.props.resetArray();
   }
 
-  
-
-
   render() {
     return (
       <Col>
@@ -25,7 +22,7 @@ class Drinks extends React.Component {
           <div className="item-btn-row">
             {Menu.Coffee.map(btn => (
               <button
-                onClick={() => this.props.agregar(btn.name,btn.value)}
+                onClick={() => this.props.agregar(btn.name, btn.value)}
                 className="main-button"
               >
                 <img src={btn.img} alt="icon-coffee"></img>
@@ -33,13 +30,13 @@ class Drinks extends React.Component {
                   <p>{btn.name}</p>
                 </div>
                 <div>
-                  <p className="item-price">{btn.value}</p>
+                  <p className="item-price">${btn.value}</p>
                 </div>
               </button>
             ))}
             {Menu.Juice.map(btn => (
               <button
-                onClick={() => this.props.agregar(btn.name,btn.value)}
+                onClick={() => this.props.agregar(btn.name, btn.value)}
                 className="main-button"
               >
                 <img src={btn.img} alt="icon-juice"></img>
@@ -47,7 +44,7 @@ class Drinks extends React.Component {
                   <p>{btn.name}</p>
                 </div>
                 <div>
-                  <p className="item-price">{btn.value}</p>
+                  <p className="item-price">${btn.value}</p>
                 </div>
               </button>
             ))}
@@ -59,7 +56,7 @@ class Drinks extends React.Component {
           <div className="item-btn-row">
             {Menu.Water.map(btn => (
               <button
-                onClick={() => this.props.agregar(btn.name,btn.value)}
+                onClick={() => this.props.agregar(btn.name, btn.value)}
                 className="main-button"
               >
                 <img src={btn.img} alt="icon-water"></img>
@@ -67,20 +64,21 @@ class Drinks extends React.Component {
                   <p>{btn.name}</p>
                 </div>
                 <div>
-                  <p className="item-price">{btn.value}</p>
+                  <p className="item-price">${btn.value}</p>
                 </div>
               </button>
             ))}
             {Menu.Soda.map(btn => (
-              <button 
-                onClick={() => this.props.agregar(btn.name,btn.value)}
-              className="main-button">
+              <button
+                onClick={() => this.props.agregar(btn.name, btn.value)}
+                className="main-button"
+              >
                 <img src={btn.img} alt="icon-soda"></img>
                 <div>
                   <p>{btn.name}</p>
                 </div>
                 <div>
-                  <p className="item-price">{btn.value}</p>
+                  <p className="item-price">${btn.value}</p>
                 </div>
               </button>
             ))}
