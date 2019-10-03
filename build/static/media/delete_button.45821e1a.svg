@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="cancel-button" width="25" height="25" viewBox="0 0 25 25">
+    <defs>
+        <style>
+            .cls-1{fill:#d82822}
+        </style>
+    </defs>
+    <g id="cancel">
+        <path id="Trazado_4732" d="M12.5 0A12.5 12.5 0 1 0 25 12.5 12.537 12.537 0 0 0 12.5 0zm6.25 17L17 18.75l-4.5-4.5-4.5 4.5L6.25 17l4.5-4.5L6.25 8 8 6.25l4.5 4.5 4.5-4.5L18.75 8l-4.5 4.5z" class="cls-1" data-name="Trazado 4732"/>
+    </g>
+</svg>

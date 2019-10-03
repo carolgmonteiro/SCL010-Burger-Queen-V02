@@ -14,6 +14,8 @@ Por último, la pantalla Resume contiene el historial de todos los pedidos, con 
 
 <a href="https://ibb.co/V2G5VdM"><img src="https://i.ibb.co/r4hNkg5/10-PROTO-ALTA-02.png" alt="10-PROTO-ALTA-02" border="0"></a>
 
+<a href="https://www.loom.com/share/5b54980ba072426eb9101847327dca80"> <p>Vídeo Presentación Burger Queen October 3rd, 2019</p> <img style="max-width:100%;" src="https://cdn.loom.com/sessions/thumbnails/5b54980ba072426eb9101847327dca80-with-play.gif"> </a>
+
 ## Planificación
 
 La planificación de este proyecto se llevó a cabo en Trello. A partir de un analisis del README, se logran extraer objetivos y tareas a realizar para llevar a cabo el proyecto.

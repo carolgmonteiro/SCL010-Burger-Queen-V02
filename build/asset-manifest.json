@@ -1,16 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.2cce8147.chunk.css",
-    "main.js": "/static/js/main.34888bac.chunk.js",
-    "main.js.map": "/static/js/main.34888bac.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.76fa5e7f.js",
-    "runtime~main.js.map": "/static/js/runtime~main.76fa5e7f.js.map",
-    "static/js/2.bb976b1a.chunk.js": "/static/js/2.bb976b1a.chunk.js",
-    "static/js/2.bb976b1a.chunk.js.map": "/static/js/2.bb976b1a.chunk.js.map",
+    "main.css": "/static/css/main.69325a0f.chunk.css",
+    "main.js": "/static/js/main.32681049.chunk.js",
+    "main.js.map": "/static/js/main.32681049.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.7ff8d1ae.js",
+    "runtime~main.js.map": "/static/js/runtime~main.7ff8d1ae.js.map",
+    "static/css/2.62261112.chunk.css": "/static/css/2.62261112.chunk.css",
+    "static/js/2.e61918c6.chunk.js": "/static/js/2.e61918c6.chunk.js",
+    "static/js/2.e61918c6.chunk.js.map": "/static/js/2.e61918c6.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0e0dfb2dc84f4b781de8bcc212705d58.js": "/precache-manifest.0e0dfb2dc84f4b781de8bcc212705d58.js",
+    "precache-manifest.a7e20596bcb993a16a1653c1e283f4a0.js": "/precache-manifest.a7e20596bcb993a16a1653c1e283f4a0.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "static/css/2.62261112.chunk.css.map": "/static/css/2.62261112.chunk.css.map",
+    "static/css/main.69325a0f.chunk.css.map": "/static/css/main.69325a0f.chunk.css.map",
+    "static/media/LOGO BURGER QUEEN-04.svg": "/static/media/LOGO BURGER QUEEN-04.feb728ac.svg",
+    "static/media/delete_button.svg": "/static/media/delete_button.45821e1a.svg",
+    "static/media/icon-kitchen-yellow.svg": "/static/media/icon-kitchen-yellow.46bdada0.svg",
+    "static/media/icon-menu-drinks.svg": "/static/media/icon-menu-drinks.1e857178.svg",
+    "static/media/icon-menu-food.svg": "/static/media/icon-menu-food.d3eee9b3.svg",
+    "static/media/icon-menu-yellow.svg": "/static/media/icon-menu-yellow.d0c0c08a.svg",
+    "static/media/icon-resume-yellow.svg": "/static/media/icon-resume-yellow.4ddd5a77.svg"
   }
 }
