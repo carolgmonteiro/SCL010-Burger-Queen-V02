@@ -6,7 +6,9 @@ import firebase from "../../../data/firebase";
 class Kitchen extends React.Component {
   constructor(props) {
     super(props);
-    console.log("kitchen");
+    this.state = {
+      orders: []
+    };
   }
 
   componentDidMount() {
@@ -21,6 +23,7 @@ class Kitchen extends React.Component {
       .then(snapshot => {
         console.log(snapshot.docs);
         snapshot.docs.forEach(order => {
+          this.setState({ orders: this.state.orders.concat([order.data()]) });
           console.log(order.data());
         });
       });
@@ -30,8 +33,9 @@ class Kitchen extends React.Component {
     return (
       <div className="lead">
         <div className="order-kitchen-container">
-          <OrderKitchen></OrderKitchen>
-          <OrderKitchen></OrderKitchen>
+          {this.state.orders.map((item, index) => (
+            <OrderKitchen order={item}></OrderKitchen>
+          ))}
         </div>
       </div>
     );
