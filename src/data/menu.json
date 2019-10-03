@@ -4,108 +4,108 @@
       {
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/water_small.svg?alt=media&token=5af44a98-47f0-402d-a930-3c8e320adc6c",
         "name": "Water 500ml",
-        "value": "$500"
+        "value": 500
       },
       {
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/water_big.svg?alt=media&token=68e63d98-5676-4186-b6b9-641137171609",
         "name": "Water 750ml",
-        "value": "$800"
+        "value": 800
       }
     ],
     "Soda": [
       {
         "name": "Soda 500ml",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/soda_small.svg?alt=media&token=5cbca961-3fd1-41d2-9aa7-9390618b5d0e",
-        "value": "$700"
+        "value": 700
       },
       {
         "name": "Soda 750ml",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/soda_big.svg?alt=media&token=e3e3e728-4a60-4018-9e47-758873a57115",
-        "value": "$1000"
+        "value": 1000
       }
     ],
     "Coffee": [
       {
         "name": "American Coffee",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/coffee-cup.svg?alt=media&token=9b31b260-99df-44c6-bfa2-8e9cb71aef20",
-        "value": "$500"
+        "value": 500
       },
       {
         "name": "Coffee and Milk",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/coffee-cup.svg?alt=media&token=9b31b260-99df-44c6-bfa2-8e9cb71aef20",
-        "value": "$700"
+        "value": 700
       }
     ],
     "Juice": [
       {
         "name": "Juice",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/natural_juice.svg?alt=media&token=b2c8834c-0b47-4c57-9c0c-da1d98805f61",
-        "value": "$700"
+        "value": 700
       }
     ],
     "Sandwich": [
       {
         "name": "Sandwich ham & cheese ",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/sandwich_breakfest.svg?alt=media&token=6994bc2d-69b0-485b-ab45-0829a5e181fd",
-        "value": "$1000"
+        "value": 1000
       }
     ],
     "Simple_Burger": [
       {
         "name": "Simple Burger meat",
-        "value": "$1500",
+        "value": 1500,
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/simple_burger_meat.svg?alt=media&token=88bd1ba0-1dc9-48e0-a816-48b035655176"
       },
       {
         "name": "Simple Burger chicken",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/simple_burger_chicken.svg?alt=media&token=6fadf39f-c89e-4e2a-9ac3-84aec4105672",
-        "value": "$1500"
+        "value": 1500
       },
       {
         "name": "Simple Burger veggie",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/simple_burger_veggie.svg?alt=media&token=430bdb05-7091-4163-947e-6fcfc86fbe19",
-        "value": "$1500"
+        "value": 1500
       }
     ],
     "Double_Burger": [
       {
         "name": "Double Burger meat",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/double_burger_meat.svg?alt=media&token=ca00b382-85ad-4e16-b650-9838251ce4a9",
-        "value": "$2500"
+        "value": 2500
       },
       {
         "name": "Double Burger chicken",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/double_burger_chicken.svg?alt=media&token=bd1607de-19b4-4ee1-b152-0f7d5d935f2a",
-        "value": "$2500"
+        "value": 2500
       },
       {
         "name": "Double Burger veggie",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/double_burger_veggie.svg?alt=media&token=3bab1e01-cc8f-40d9-9a36-52483a7f1754",
-        "value": "$2500"
+        "value": 2500
       }
     ],
     "Toppings": [
       {
         "name": "+ Cheese",
-        "value": "$500",
+        "value": 500,
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/cheese.svg?alt=media&token=879ee260-7bf2-4ed4-9792-29e63966ac51"
       },
       {
         "name": "+ Egg",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/egg.svg?alt=media&token=0ca6b551-3b3e-4a9b-99cf-a8aef0d65fdd",
-        "value": "$500"
+        "value": 500
       }
     ],
     "Side_Dishes": [
       {
         "name": "French Fries",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/fried-potatoes.svg?alt=media&token=1997b380-fa94-4438-8e66-208def7f5a2d",
-        "value": "$500"
+        "value": 500
       },
       {
         "name": "Onion Rings",
         "img": "https://firebasestorage.googleapis.com/v0/b/burger-queen-4a800.appspot.com/o/onion-rings.svg?alt=media&token=fa89ad00-22b9-4bf3-a6f6-d5f9a212d15d",
-        "value": "$500"
+        "value": 500
       }
     ]
   }
