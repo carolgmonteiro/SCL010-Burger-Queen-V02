@@ -7,14 +7,15 @@ class Drinks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: " ",
-      value: " ",
-      watch: false,
-      watchfood: false,
-      watchliquids: false,
-      data: props.data
+      list: [],
+      value: {}
     };
+    // this.resetArray = this.props.resetArray();
   }
+
+  
+
+
   render() {
     return (
       <Col>
@@ -24,7 +25,7 @@ class Drinks extends React.Component {
           <div className="item-btn-row">
             {Menu.Coffee.map(btn => (
               <button
-                onClick={() => this.props.add(btn.value, btn.name)}
+                onClick={() => this.props.agregar(btn.name,btn.value)}
                 className="main-button"
               >
                 <img src={btn.img} alt="icon-coffee"></img>
@@ -38,7 +39,7 @@ class Drinks extends React.Component {
             ))}
             {Menu.Juice.map(btn => (
               <button
-                onClick={() => this.props.add(btn.value, btn.name)}
+                onClick={() => this.props.agregar(btn.name,btn.value)}
                 className="main-button"
               >
                 <img src={btn.img} alt="icon-juice"></img>
@@ -58,7 +59,7 @@ class Drinks extends React.Component {
           <div className="item-btn-row">
             {Menu.Water.map(btn => (
               <button
-                onClick={() => this.props.add(btn.value, btn.name)}
+                onClick={() => this.props.agregar(btn.name,btn.value)}
                 className="main-button"
               >
                 <img src={btn.img} alt="icon-water"></img>
@@ -71,7 +72,9 @@ class Drinks extends React.Component {
               </button>
             ))}
             {Menu.Soda.map(btn => (
-              <button className="main-button">
+              <button 
+                onClick={() => this.props.agregar(btn.name,btn.value)}
+              className="main-button">
                 <img src={btn.img} alt="icon-soda"></img>
                 <div>
                   <p>{btn.name}</p>

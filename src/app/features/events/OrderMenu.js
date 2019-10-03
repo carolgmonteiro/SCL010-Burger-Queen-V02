@@ -5,18 +5,18 @@ import moment from "moment";
 import OrderList from "../events/OrderList";
 import Drinks from "../menu/Drinks";
 import Food from "../menu/Food";
+
+
+
 class OrderMenu extends React.Component {
  
   constructor(props) {
     super(props);
     this.state = {
-
-      waiter: "",
-      client: "",
       list: [],
-      value: ""
+      value: "",
+      total: 0
     };
-    this.addOrder = this.addOrder.bind(this);
   }
 
   handleInput = e => {
@@ -30,13 +30,6 @@ class OrderMenu extends React.Component {
   };
 
   addToList(optionToAdd, valueToAdd) {
-    // let newOrder = [...this.state.order];
-    // for (let i = 0; i < newOrder.length; i++) {
-    //   if (newOrder[i].name === optionToAdd) {
-    //     newOrder[i].count++;
-    //   }
-    // }
-    console.log("hola");
     this.setState({ order: this.state.order.concat([{ name: optionToAdd }]) });
   }
   onChangeValue = event => {
@@ -65,6 +58,10 @@ class OrderMenu extends React.Component {
       };
     });
   };
+
+  readList = () => {
+    console.log(this.props.estado);
+  }
   addOrder = e => {
     e.preventDefault();
     this.setState({
@@ -125,12 +122,11 @@ class OrderMenu extends React.Component {
   // }
 
 
-      menu: ['menu1', 'menu2', 'menu3', 'menu4', 'menu5', 'menu6'],
-    };
+
   
 
   render() {
-    const { menu } = this.state;
+    
     return (
 
       <div className="order-menu-container">
@@ -142,7 +138,7 @@ class OrderMenu extends React.Component {
               type="text"
               name="waiter"
               placeholder="Waiter"
-              value={this.state.waiter}
+  
             />
 
             <input
@@ -151,7 +147,7 @@ class OrderMenu extends React.Component {
               type="text"
               name="client"
               placeholder="Client"
-              value={this.state.client}
+
             />
           </form>
 
@@ -159,46 +155,33 @@ class OrderMenu extends React.Component {
           <div className="line"></div>
           <div className="orderList">
             <OrderList></OrderList>
-            <input
-              type="text"
-              value={this.state.value}
-              onChange={this.onChangeValue}
-            />
-            <button
-              type="button"
-              onClick={this.onAddItem}
-              disabled={!this.state.value}
-            >
-              Add
-            </button>
+            
             <ul>
-              {this.state.list.map((item, index) => (
+              {this.props.estado.map((item, index) => (
+                
                 <li key={item}>
-                  The person is {item} years old.
+               
+                 {this.state.total += item.value}
+                  {item.name} {item.value} 
                   <button
                     type="button"
-                    onClick={() => this.onRemoveItem(index)}
+                    onClick={() => this.props.remover(index)}
                   >
                     Remove
                   </button>
                 </li>
               ))}
             </ul>
-            <button type="button" onClick={this.onCleanArray}>
-              Clear Array
-            </button>
-            <button type="button" onClick={this.onResetArray}>
-              Reset Array
-            </button>
+  
           </div>
           <div className="box-value">
             <h6>Total $</h6>
-            <h6>0,00</h6>
+            <h6>{this.state.total}</h6>
           </div>
           <div className="line"></div>
           <br />
 
-          <button onClick={this.addOrder} className="actionButtonSend">
+          <button onClick={() => this.props.enviar()} className="actionButtonSend">
             Send to the Kitchen
           </button>
           <button onClick={this.clearOrder} className="actionButtonClear">

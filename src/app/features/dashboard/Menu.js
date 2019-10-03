@@ -4,37 +4,52 @@ import Drinks from "../menu/Drinks";
 import Food from "../menu/Food";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-<<<<<<< HEAD
 import OrderMenu from "../../../app/features/events/OrderMenu.js"
 import { Col } from "reactstrap";
 
 class Menu extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-    
+    this.state = {
+      list: [],
+      value: {},
+      total: 0
+    };
   }
 
-  onClickAdd(name, value) {
-    this.setState({
-      name: name,
-      value: value
-    });
-  };
-
-onRemoveItem = i => {
+  onAddItem = (name, valor) => {
     this.setState(state => {
-      const list = state.list.filter((item, j) => i !== j);
+      const list = [...state.list, {name: name,value:valor}];
       return {
         list,
+        value: {}
       };
     });
   };
+
+   onRemoveItem = i => {
+    this.setState(state => {
+      const list = state.list.filter((item, j) => i !== j);
+      return {
+        list
+      };
+    });
+  };
+  
+  onCleanArray = () => {
+    this.setState({ list: [] });
+    alert("Your order has been sent to the Kitchen")
+  };
+  onResetArray = () => {
+    this.setState({ list: [1, 2, 3] });
+  };
+
 
   render() {
     return (
 
 <div className="menu-row-container">
+
         <div className="row">
           <div className="col-md-6 col-md-offset-6">
       <Tabs className="ShowMenu">
@@ -57,15 +72,15 @@ onRemoveItem = i => {
                 </Tab>
               </TabList>
               <TabPanel>
-                <Drinks />
+                <Drinks agregar={this.onAddItem.bind(this)} />
               </TabPanel>
               <TabPanel>
-                <Food clickToAdd={this.onClickAdd.bind(this)} />
+                <Food agregar={this.onAddItem.bind(this)} />
               </TabPanel>
             </Tabs>
           </div>
           <Col className="Order-container">
-            <OrderMenu />
+            <OrderMenu estado={this.state.list} remover={this.onRemoveItem.bind(this)} enviar={this.onCleanArray.bind(this)}/>
           </Col>
         </div>
       </div>
@@ -79,12 +94,3 @@ onRemoveItem = i => {
 
 export default Menu;
 
-/*/* <label>Waiter: </label> <input type="textbox" />
-<hr />
-<label>Client: </label> <input type="textbox" />
-<hr />
-<br />
-<h3>Order </h3>
-<hr />
-<p>{this.state.name}</p>
-<p>{this.state.value}</p> */*/
