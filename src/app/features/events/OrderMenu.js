@@ -156,19 +156,29 @@ class OrderMenu extends React.Component {
           <div className="orderList">
             <OrderList></OrderList>
             
-            <ul>
+            <ul >
               {this.props.estado.map((item, index) => (
                 
-                <li key={item}>
+                <li key={item} >
                
-                 {this.state.total += item.value}
+               <li className="orderList2"> 
                   {item.name} {item.value} 
-                  <button
-                    type="button"
-                    onClick={() => this.props.remover(index)}
-                  >
-                    Remove
-                  </button>
+                 
+                    <button type="button" 
+                     onClick={() => this.props.remover(index)} >
+                    <div>
+
+
+
+                <img src={require("../../../../src/img/eliminar.png")}
+                    height="20"
+                    width="20"
+                    alt="icon"
+                  />
+
+                    </div>
+                    </button>
+                  </li>
                 </li>
               ))}
             </ul>

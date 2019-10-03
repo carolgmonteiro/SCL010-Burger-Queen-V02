@@ -80,6 +80,7 @@ class Menu extends React.Component {
             </Tabs>
           </div>
           <Col className="Order-container">
+
             <OrderMenu estado={this.state.list} remover={this.onRemoveItem.bind(this)} enviar={this.onCleanArray.bind(this)}/>
           </Col>
         </div>

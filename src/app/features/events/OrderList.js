@@ -5,7 +5,15 @@ class OrderList extends React.Component {
     return (
       <div>
         <label className="box-value">
-          <div className="box-value">
+        
+        </label>
+      </div>
+    );
+  }
+}
+
+
+  /*<div className="box-value">
             <button className="delete-icon">
               <img
                 src={require("../../../../src/img/delete_button.svg")}
@@ -14,13 +22,7 @@ class OrderList extends React.Component {
             </button>
             <li>American Coffee</li>
           </div>
-          <li>$500</li>
-        </label>
-      </div>
-    );
-  }
-}
-
+          <li>$500</li>*/
 // class OrderList extends React.Component {
 
 //  render() {
