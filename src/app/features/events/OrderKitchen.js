@@ -1,39 +1,29 @@
 import React from "react";
 
 class OrderKitchen extends React.Component {
+  maporders(orders) {
+    if (orders) {
+      return this.props.order.order.map((item, index) => (
+        <label className="box-value">
+          <li>{item.name}</li>
+          <li>${item.value}</li>
+        </label>
+      ));
+    } else {
+      return <div></div>;
+    }
+  }
   render() {
     return (
       <div className="order-kitchen-card">
-        <h6>Ada Lovelace</h6>
+        <h6>{this.props.order.client}</h6>
         <div className="line"></div>
-        <p>Roberto</p>
+        <p>{this.props.order.waiter}</p>
         <label className="box-value">
-          <p>02.10.2019</p>
-          <p>at 15:30hrs</p>
+          <p>{this.props.order.createdAt}</p>
         </label>
         <div className="line-thin"></div>
-
-        <label className="box-value">
-          <li>American Coffee</li>
-          <li>$500</li>
-        </label>
-        <label className="box-value">
-          <li>Soda 500ml</li>
-          <li>$500</li>
-        </label>
-        <label className="box-value">
-          <li>Simple Burger - Meat</li>
-          <li>$1.500</li>
-        </label>
-        <label className="box-value">
-          <li>Egg</li>
-          <li>$500</li>
-        </label>
-        <label className="box-value">
-          <li>Frensh fries</li>
-          <li>$500</li>
-        </label>
-        <h5>Total $ 3.500</h5>
+        <div>{this.maporders(this.props.order.order)}</div>
         <div className="line-thin"></div>
         <br />
         <div className="btn-kitchen">
@@ -129,4 +119,62 @@ export default OrderKitchen;
 //       </div>
 //     ));
 //   }
+// }
+
+// render() {
+//   return (
+//     <div className="order-kitchen-card">
+//       <h6>Ada Lovelace</h6>
+//       <div className="line"></div>
+//       <p>Roberto</p>
+//       <label className="box-value">
+//         <p>02.10.2019</p>
+//         <p>at 15:30hrs</p>
+//       </label>
+//       <div className="line-thin"></div>
+
+//       <label className="box-value">
+//         <li>American Coffee</li>
+//         <li>$500</li>
+//       </label>
+//       <label className="box-value">
+//         <li>Soda 500ml</li>
+//         <li>$500</li>
+//       </label>
+//       <label className="box-value">
+//         <li>Simple Burger - Meat</li>
+//         <li>$1.500</li>
+//       </label>
+//       <label className="box-value">
+//         <li>Egg</li>
+//         <li>$500</li>
+//       </label>
+//       <label className="box-value">
+//         <li>Frensh fries</li>
+//         <li>$500</li>
+//       </label>
+//       <h5>Total $ 3.500</h5>
+//       <div className="line-thin"></div>
+//       <br />
+//       <div className="btn-kitchen">
+//         <div className="template-order">
+//           <label className="switch">
+//             <input type="checkbox" />
+//             <span className="slider round"></span>
+//             <br />
+//           </label>
+//           <p>Cooked</p>
+//         </div>
+//         <div className="template-order">
+//           <label className="switch">
+//             <input type="checkbox" />
+//             <span className="slider round"></span>
+//             <br />
+//           </label>
+//           <p>Delivered</p>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 // }

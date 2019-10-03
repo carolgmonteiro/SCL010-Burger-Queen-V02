@@ -74,7 +74,7 @@ class OrderMenu extends React.Component {
       client: "",
       statusNotReady: true,
       createdAt: "",
-      list: []
+      list: this.props.estado
     });
 
     let idClient =
@@ -85,7 +85,7 @@ class OrderMenu extends React.Component {
       client: this.state.client,
       statusNotReady: true,
       createdAt: moment(Date.now()).format("MMMM Do YYYY, h:mm a"),
-      list: []
+      list: this.props.estado
     };
     const db = firebase.firestore();
     db.settings({
@@ -97,7 +97,7 @@ class OrderMenu extends React.Component {
       .then(() => {
         this.readOrder();
       });
-
+    this.props.enviar();
     console.log("Form was submitted");
   };
 
@@ -127,16 +127,16 @@ class OrderMenu extends React.Component {
               className="inputFormulary"
               onChange={this.handleInput}
               type="text"
-              name="waiter"
-              placeholder="Waiter"
+              name="client"
+              placeholder="Client"
             />
 
             <input
               className="inputFormulary"
               onChange={this.handleInput}
               type="text"
-              name="client"
-              placeholder="Client"
+              name="waiter"
+              placeholder="Waiter"
             />
           </form>
 
@@ -169,7 +169,7 @@ class OrderMenu extends React.Component {
           </div>
           <div className="box-value">
             <h6>Total $</h6>
-            <h6>{this.state.total}</h6>
+            {/* <h6>{(this.props.total = item.name += item.value)}</h6> */}
           </div>
           <div className="line"></div>
           <br />
