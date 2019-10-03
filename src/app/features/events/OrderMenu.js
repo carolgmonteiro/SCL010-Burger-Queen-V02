@@ -180,9 +180,8 @@ class OrderMenu extends React.Component {
           <button onClick={this.onCleanArray} className="actionButtonClear">
             Clear Order
           </button>
-          <button onClick={this.onResetArray} className="actionButtonClear">
-            Reset
-          </button>
+    
+          
         </div>
       </div>
     );
@@ -191,80 +190,3 @@ class OrderMenu extends React.Component {
 
 export default OrderMenu;
 
-/* <button
-            onClick={() => this.props.enviar()}
-            className="actionButtonSend"
-          >
-            Send to the Kitchen
-          </button> */
-
-// render() {
-//   return (
-//     <div className="order-menu-container">
-//       <div className="col-xs-12 col-md-12">
-//         <form onSubmit={this.addOrder} className="form-group">
-//           <input
-//             className="inputFormulary"
-//             onChange={this.handleInput}
-//             type="text"
-//             name="waiter"
-//             placeholder="Waiter"
-//           />
-
-//           <input
-//             className="inputFormulary"
-//             onChange={this.handleInput}
-//             type="text"
-//             name="client"
-//             placeholder="Client"
-//           />
-//         </form>
-
-//         <h6>Order</h6>
-//         <div className="line"></div>
-//         <div className="orderList">
-
-//           <ul>
-//             {this.props.estado.map((item, index) => (
-//               <li key={item}>
-//                 <li className="orderList2">
-//                   {item.name} {item.value}
-//                   {(this.state.total = item.value + 1)};
-//                   <button
-//                     type="button"
-//                     onClick={() => this.props.remover(index)}
-//                   >
-//                     <div>
-//                       <img
-//                         src={require("../../../../src/img/eliminar.png")}
-//                         height="20"
-//                         width="20"
-//                         alt="icon"
-//                       />
-//                     </div>
-//                   </button>
-//                 </li>
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-//         <div className="box-value">
-//           <h6>Total $</h6>
-//           <h6>{this.state.total}</h6>
-//         </div>
-//         <div className="line"></div>
-//         <br />
-
-//         <button onClick={this.addOrder} className="actionButtonSend">
-//           Send to the Kitchen
-//         </button>
-//         <button onClick={this.clearOrder} className="actionButtonClear">
-//           Clear Order
-//         </button>
-//         <button onClick={this.clearOrder} className="actionButtonClear">
-//           Reset
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }

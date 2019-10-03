@@ -38,8 +38,9 @@ class Menu extends React.Component {
 
   onCleanArray = () => {
     this.setState({ list: [] });
-    alert("Your order has been sent to the Kitchen");
+    alert("Your order has been sent to the Kitchen")
   };
+  
   onResetArray = () => {
     this.setState({ list: [1, 2, 3] });
   };
