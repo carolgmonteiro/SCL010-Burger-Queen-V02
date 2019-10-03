@@ -1,5 +1,6 @@
 <a href="https://ibb.co/Sf11nTQ"><img src="https://i.ibb.co/VwhhSyH/01-INICIO.png" alt="01-INICIO" border="0"></a>
 
+te invitamos a nuestra aplicación https://adrievelyn.github.io/SCL010-Burger-Queen/
 ## Descripción del Producto
 
 Burger Queen es una interfaz diseñada para locales de comida, que permite facilitar el flujo que se lleva a cabo desde la toma de pedidos que realiza el mesero, pasando por la cocina y hasta la entrega de estos al cliente.
