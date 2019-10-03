@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import OrderKitchen from "../events/OrderKitchen";
 import firebase from "../../../data/firebase";
 
 class Kitchen extends React.Component {
@@ -28,10 +29,10 @@ class Kitchen extends React.Component {
   render() {
     return (
       <div className="lead">
-        <h4>kitchen</h4>
-        <button onClick={this.readOrder} className="btn btn-primary">
-          Read
-        </button>
+        <div className="order-kitchen-container">
+          <OrderKitchen></OrderKitchen>
+          <OrderKitchen></OrderKitchen>
+        </div>
       </div>
     );
   }

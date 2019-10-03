@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="124" height="124" viewBox="0 0 124 124">
+    <defs>
+        <style>
+            .cls-1{fill:#f7b32c}.cls-2,.cls-3{fill:#4f1a0f}.cls-3{font-size:16px;font-family:Roboto-Bold,Roboto;font-weight:700}.cls-4{filter:url(#Elipse_64)}
+        </style>
+        <filter id="Elipse_64" width="124" height="124" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Componente_16_1" data-name="Componente 16 – 1" transform="translate(9 6)">
+        <g class="cls-4" transform="translate(-9 -6)">
+            <circle id="Elipse_64-2" cx="53" cy="53" r="53" class="cls-1" data-name="Elipse 64" transform="translate(9 6)"/>
+        </g>
+        <g id="Grupo_590" data-name="Grupo 590" transform="translate(21.388 15.47)">
+            <g id="return-to-the-past" transform="translate(9.495 4.647)">
+                <path id="Trazado_4684" d="M36.2 6.212a21.234 21.234 0 0 0-22.183-4.961l-.471-.812a.829.829 0 0 0-.716-.412.829.829 0 0 0-.716.416l-3.279 5.71a.828.828 0 0 0 .718 1.241l6.583-.018a.828.828 0 0 0 .714-1.245l-.283-.487a16.239 16.239 0 1 1-11.6 15.564.828.828 0 0 0-.828-.828H.828a.828.828 0 0 0-.828.828 21.208 21.208 0 0 0 36.2 15 21.208 21.208 0 0 0 0-29.993zm-15 34.548A19.576 19.576 0 0 1 1.674 22.037h1.658a17.895 17.895 0 0 0 30.529 11.824A17.9 17.9 0 0 0 15.056 4.4a.829.829 0 0 0-.431 1.194l.074.128-3.713.01 1.848-3.221.1.179a.828.828 0 0 0 1.023.353 19.554 19.554 0 1 1 7.247 37.715zm0 0" class="cls-2" data-name="Trazado 4684"/>
+                <path id="Trazado_4685" d="M363.411 130.288a.828.828 0 0 0-1.17 1.173l.006.006a.829.829 0 0 0 1.17-1.173zm0 0" class="cls-2" data-name="Trazado 4685" transform="translate(-332.01 -119.273)"/>
+                <path id="Trazado_4686" d="M103.751 84.966a.829.829 0 0 0-.32-1.127 14.517 14.517 0 0 0-8.913-1.694 14.414 14.414 0 1 0 14.27 6.889.828.828 0 1 0-1.421.852 12.757 12.757 0 1 1-4.743-4.6.829.829 0 0 0 1.127-.32zm0 0" class="cls-2" data-name="Trazado 4686" transform="translate(-75.207 -75.227)"/>
+                <path id="Trazado_4687" d="M247.786 120.45v-.621a.828.828 0 0 0-1.657 0v.621a.828.828 0 0 0 1.657 0zm0 0" class="cls-2" data-name="Trazado 4687" transform="translate(-225.739 -109.142)"/>
+                <path id="Trazado_4688" d="M245.871 366.328v.621a.828.828 0 0 0 1.657 0v-.621a.828.828 0 0 0-1.657 0zm0 0" class="cls-2" data-name="Trazado 4688" transform="translate(-225.502 -335.22)"/>
+                <path id="Trazado_4689" d="M365.5 246.957a.829.829 0 0 0 .828.828h.621a.828.828 0 0 0 0-1.657h-.621a.828.828 0 0 0-.828.829zm0 0" class="cls-2" data-name="Trazado 4689" transform="translate(-335.22 -225.739)"/>
+                <path id="Trazado_4690" d="M119.828 245.871a.828.828 0 1 0 0 1.657h.621a.828.828 0 1 0 0-1.657zm0 0" class="cls-2" data-name="Trazado 4690" transform="translate(-109.142 -225.502)"/>
+                <path id="Trazado_4691" d="M180.35 175.38a.828.828 0 0 0-.828-.828h-3.8l-6.211-6.211a.828.828 0 0 0-1.171 1.171l6.454 6.454a.828.828 0 0 0 .586.243h4.142a.828.828 0 0 0 .828-.828zm0 0" class="cls-2" data-name="Trazado 4691" transform="translate(-154.172 -154.172)"/>
+            </g>
+            <text id="RESUME" class="cls-3" transform="translate(-.388 64.53)">
+                <tspan x="0" y="0">RESUME</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

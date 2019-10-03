@@ -1,15 +1,39 @@
 import React from "react";
-// import '../App.css';
 import "bootstrap/dist/css/bootstrap.css";
+import firebase from "../../../data/firebase";
+import OrderResume from "../events/OrderResume";
 
-function Resume() {
-  const getContent = () => {
-    return "Resume";
-  };
+class Resume extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-  let content = getContent();
+  componentDidMount() {
+    console.log("leer orden");
+    const db = firebase.firestore();
+    db.settings({
+      timestampsInSnapshots: true
+    });
+    db.collection("order")
+      .where("statusNotReady", "==", true)
+      .get()
+      .then(snapshot => {
+        console.log(snapshot.docs);
+        snapshot.docs.forEach(order => {
+          console.log(order.data());
+        });
+      });
+  }
 
-  return <span> {content} </span>;
+  render() {
+    return (
+      <div className="lead">
+        <div className="order-kitchen-container">
+          <OrderResume></OrderResume>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Resume;
