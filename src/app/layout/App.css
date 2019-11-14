@@ -1,5 +1,26 @@
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  display: flex;
+  /* background-color: #fff; */
+  background: #efefbb; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #d4d3dd,
+    #efefbb
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #d4d3dd,
+    #efefbb
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  justify-content: center;
+}
+
 .App {
   text-align: center;
+  justify-content: center;
 }
 h2 {
   color: #4f1a0f;
@@ -20,10 +41,6 @@ p {
   color: #4f1a0f;
   font-size: 18px;
 }
-body {
-  font-family: "Roboto", sans-serif;
-  width: 100%;
-}
 
 a {
   color: #4f1a0f;
@@ -35,7 +52,16 @@ li {
   font-size: 18px;
   color: #4f1a0f;
 }
-
+.logo-home img {
+  justify-content: center;
+  padding: 2%;
+  height: 400px;
+}
+.logo-header img {
+  justify-content: left;
+  padding: 2%;
+  height: 200px;
+}
 .logo {
   justify-content: center;
   padding: 2%;
