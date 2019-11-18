@@ -9,8 +9,9 @@ class OrderMenu extends React.Component {
     this.state = {
       client: "",
       waiter: "",
-      list: [],
+      order: [],
       value: "",
+      statusNotReady: true,
       total: 0
     };
     this.addToList = this.addToList.bind(this);
@@ -31,37 +32,38 @@ class OrderMenu extends React.Component {
   };
 
   addToList(optionToAdd, valueToAdd) {
-    this.setState({ list: this.state.order.concat([{ name: optionToAdd }]) });
+    this.setState({ order: this.state.order.concat([{ name: optionToAdd }]) });
   }
   onChangeValue = event => {
     this.setState({ value: event.target.value });
   };
   onCleanArray = () => {
-    this.setState({ list: [] });
+    this.setState({ order: [] });
   };
   onResetArray = () => {
-    this.setState({ list: [1, 2, 3] });
+    this.setState({ order: [1, 2, 3] });
   };
-  onAddItem = () => {
+  onAddItem = e => {
     this.setState(state => {
-      const list = [...state.list, state.value];
+      const order = [...state.order, state.value];
       return {
-        list,
+        order,
         value: ""
       };
     });
   };
+
   onRemoveItem = i => {
     this.setState(state => {
-      const list = state.list.filter((item, j) => i !== j);
+      const order = state.order.filter((item, j) => i !== j);
       return {
-        list
+        order
       };
     });
   };
 
   readList = () => {
-    console.log(this.props.list);
+    console.log(this.props.order);
   };
   // readList = () => {
   //   console.log(this.props.estado);
@@ -74,8 +76,19 @@ class OrderMenu extends React.Component {
       client: "",
       statusNotReady: true,
       createdAt: "",
-      list: this.props.estado
+      order: this.props.estado
     });
+
+    // addOrders = (e) => {
+    //   let orders=this.state.rows;
+    //   orders.push({name:e.name,
+    //   price:`$${e.price}`});
+    //   this.setState({rows:orders});
+    //   let currentTotal = this.state.total;
+    //   let addToTotal = e.price;
+    //   let newTotal = currentTotal + addToTotal;
+    //   this.setState({total: newTotal})
+    // }
 
     let idClient =
       moment(Date.now()).format("MMMM Do YYYY, h:mm a") + this.state.client;
@@ -85,7 +98,7 @@ class OrderMenu extends React.Component {
       client: this.state.client,
       statusNotReady: true,
       createdAt: moment(Date.now()).format("MMMM Do YYYY, h:mm a"),
-      list: this.props.estado
+      order: this.props.estado
     };
     const db = firebase.firestore();
     db.settings({
@@ -159,7 +172,6 @@ class OrderMenu extends React.Component {
                         />
                       </button>
                       <li>{item.name}</li>
-
                     </div>
                     <li>${item.value}</li>
                   </label>
@@ -180,8 +192,6 @@ class OrderMenu extends React.Component {
           <button onClick={this.onCleanArray} className="actionButtonClear">
             Clear Order
           </button>
-    
-          
         </div>
       </div>
     );
@@ -189,4 +199,3 @@ class OrderMenu extends React.Component {
 }
 
 export default OrderMenu;
-

@@ -11,17 +11,20 @@ class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: [],
-      value: {},
+      client: "",
+      waiter: "",
+      statusNotReady: "true",
+      order: [],
+      value: "",
       total: 0
     };
   }
 
   onAddItem = (name, valor) => {
     this.setState(state => {
-      const list = [...state.list, { name: name, value: valor }];
+      const order = [...state.order, { name: name, value: valor }];
       return {
-        list,
+        order,
         value: {}
       };
     });
@@ -29,20 +32,20 @@ class Menu extends React.Component {
 
   onRemoveItem = i => {
     this.setState(state => {
-      const list = state.list.filter((item, j) => i !== j);
+      const order = state.list.filter((item, j) => i !== j);
       return {
-        list
+        order
       };
     });
   };
 
   onCleanArray = () => {
-    this.setState({ list: [] });
-    alert("Your order has been sent to the Kitchen")
+    this.setState({ order: [] });
+    alert("Your order has been sent to the Kitchen");
   };
-  
+
   onResetArray = () => {
-    this.setState({ list: [1, 2, 3] });
+    this.setState({ order: [1, 2, 3] });
   };
 
   render() {
@@ -79,7 +82,7 @@ class Menu extends React.Component {
           </div>
           <Col className="Order-container">
             <OrderMenu
-              estado={this.state.list}
+              estado={this.state.order}
               remover={this.onRemoveItem.bind(this)}
               enviar={this.onCleanArray.bind(this)}
             />
