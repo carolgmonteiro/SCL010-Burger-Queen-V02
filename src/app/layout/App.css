@@ -1,6 +1,7 @@
 body {
   font-family: "Lato", sans-serif;
-  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   /* display: flex; */
   /* background-color: #fff; */
   background: #efefbb; /* fallback for old browsers */
@@ -52,15 +53,36 @@ li {
   font-size: 18px;
   color: #4f1a0f;
 }
+/* .logo h2 {
+  padding-top: 2rem;
+  padding-left: 3rem;
+  font-size: 50px;
+  font-weight: 800;
+} */
+.logo-menu {
+  justify-content: space-around;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.logo-menu img {
+  height: 100%;
+}
+.menu-icon-template {
+  padding-left: 5%;
+}
+.logo-home {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
 .logo-home img {
   justify-content: center;
-  padding: 2%;
-  height: 400px;
+  width: 100%;
 }
 .logo-header img {
   justify-content: left;
   padding: 2%;
-  height: 200px;
+  height: 150px;
 }
 .logo {
   justify-content: center;
@@ -79,6 +101,9 @@ li {
   color: #f72c25;
   font-size: 18px;
 }
+.menu-row-container {
+  width: 100vw;
+}
 
 .menu-icons {
   transition: all 0.3s ease 0s;
@@ -92,6 +117,21 @@ li {
 .menu-icons img {
   font-family: "Lato", sans-serif;
   font-weight: 800;
+}
+
+.menu-icons-home {
+  transition: all 0.3s ease 0s;
+  outline: none;
+}
+.menu-icons-home:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.menu-icons-home img {
+  font-family: "Lato", sans-serif;
+  padding: 0 !important;
+  width: 100%;
 }
 .inputFormulary {
   border: none;
@@ -218,21 +258,13 @@ p {
   margin: 1%;
 }
 
-/* .menu-row-container {
-  background: #ece6e4;
-  width: 100%;
-  height: 1000px;
-} */
 .order-kitchen-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
-/* .order-menu-container {
-  width: 90%;
-  background: #ffffff;
-} */
+
 .orderList {
   height: 400px;
   padding-top: 3%;
@@ -256,8 +288,11 @@ p {
 }
 
 .nav-link {
-  display: flex;
+  display: flex !important;
+  flex-wrap: wrap !important;
   justify-content: space-between;
+  padding: 0 !important;
+  margin: 0 auto;
 }
 
 .btn-kitchen {

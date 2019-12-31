@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 import firebase from "../../../data/firebase";
 import "bootstrap/dist/css/bootstrap.css";
 import moment from "moment";
-// import OrderList from "../events/OrderList";
+
 class OrderMenu extends React.Component {
   constructor(props) {
     super(props);
@@ -79,17 +79,6 @@ class OrderMenu extends React.Component {
       order: this.props.estado
     });
 
-    // addOrders = (e) => {
-    //   let orders=this.state.rows;
-    //   orders.push({name:e.name,
-    //   price:`$${e.price}`});
-    //   this.setState({rows:orders});
-    //   let currentTotal = this.state.total;
-    //   let addToTotal = e.price;
-    //   let newTotal = currentTotal + addToTotal;
-    //   this.setState({total: newTotal})
-    // }
-
     let idClient =
       moment(Date.now()).format("MMMM Do YYYY, h:mm a") + this.state.client;
     let data = {
@@ -133,67 +122,69 @@ class OrderMenu extends React.Component {
 
   render() {
     return (
-      <div className="order-menu-container">
-        <div className="col-xs-12 col-md-12">
-          <form onSubmit={this.addOrder} className="form-group">
-            <input
-              className="inputFormulary"
-              onChange={this.handleInput}
-              type="text"
-              name="client"
-              placeholder="Client"
-            />
+      <Fragment>
+        <div className="order-menu-container">
+          <div className="col-xs-12 col-md-12">
+            <form onSubmit={this.addOrder} className="form-group">
+              <input
+                className="inputFormulary"
+                onChange={this.handleInput}
+                type="text"
+                name="client"
+                placeholder="Client"
+              />
 
-            <input
-              className="inputFormulary"
-              onChange={this.handleInput}
-              type="text"
-              name="waiter"
-              placeholder="Waiter"
-            />
-          </form>
+              <input
+                className="inputFormulary"
+                onChange={this.handleInput}
+                type="text"
+                name="waiter"
+                placeholder="Waiter"
+              />
+            </form>
 
-          <h6>Order</h6>
-          <div className="line"></div>
-          <div className="orderList">
-            <ul>
-              {this.props.estado.map((item, index) => (
-                <div key={item}>
-                  <label className="box-value">
-                    <div className="box-value">
-                      <button
-                        className="delete-icon"
-                        type="button"
-                        onClick={() => this.props.remover(index)}
-                      >
-                        <img
-                          src={require("../../../../src/img/delete_button.svg")}
-                          alt="icon"
-                        />
-                      </button>
-                      <li>{item.name}</li>
-                    </div>
-                    <li>${item.value}</li>
-                  </label>
-                </div>
-              ))}
-            </ul>
+            <h6>Order</h6>
+            <div className="line"></div>
+            <div className="orderList">
+              <ul>
+                {this.props.estado.map((item, index) => (
+                  <div key={item}>
+                    <label className="box-value">
+                      <div className="box-value">
+                        <button
+                          className="delete-icon"
+                          type="button"
+                          onClick={() => this.props.remover(index)}
+                        >
+                          <img
+                            src={require("../../../../src/img/delete_button.svg")}
+                            alt="icon"
+                          />
+                        </button>
+                        <li>{item.name}</li>
+                      </div>
+                      <li>${item.value}</li>
+                    </label>
+                  </div>
+                ))}
+              </ul>
+            </div>
+            <div className="box-value">
+              <h6>Total $</h6>
+              {/* <h6>{(this.props.total = item.name += item.value)}</h6> */}
+            </div>
+            <div className="line"></div>
+            <br />
+
+            <button onClick={this.addOrder} className="actionButtonSend">
+              Send to the Kitchen
+            </button>
+            <button onClick={this.onCleanArray} className="actionButtonClear">
+              Clear Order
+            </button>
           </div>
-          <div className="box-value">
-            <h6>Total $</h6>
-            {/* <h6>{(this.props.total = item.name += item.value)}</h6> */}
-          </div>
-          <div className="line"></div>
-          <br />
-
-          <button onClick={this.addOrder} className="actionButtonSend">
-            Send to the Kitchen
-          </button>
-          <button onClick={this.onCleanArray} className="actionButtonClear">
-            Clear Order
-          </button>
         </div>
-      </div>
+      </Fragment>
     );
   }
 }

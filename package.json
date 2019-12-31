@@ -2,7 +2,7 @@
   "name": "burger-queen",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://adrievelyn.github.io/SCL010-Burger-Queen",
+  "homepage": "https://carolgmonteiro.github.io/SCL010-Burger-Queen-V02",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "firebase": "^6.6.2",

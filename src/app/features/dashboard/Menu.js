@@ -1,11 +1,12 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
 import Drinks from "../menu/Drinks";
 import Food from "../menu/Food";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import OrderMenu from "../../../app/features/events/OrderMenu.js";
-import { Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
 
 class Menu extends React.Component {
   constructor(props) {
@@ -51,6 +52,23 @@ class Menu extends React.Component {
   render() {
     return (
       <div className="menu-row-container">
+        <Row>
+          <Col className="logo-menu">
+            <Row>
+              <Link to={"/"}>
+                <img
+                  src={require("../../../img/LOGO BURGER QUEEN-04.svg")}
+                  alt="logo"
+                />
+              </Link>
+              <img
+                className="menu-icon-template"
+                src={require("../../../img/icon-menu-yellow.svg")}
+                alt="logo"
+              />
+            </Row>
+          </Col>
+        </Row>
         <div className="row">
           <div className="col-md-6 col-md-offset-6">
             <Tabs className="ShowMenu">

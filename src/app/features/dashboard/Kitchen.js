@@ -2,6 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import OrderKitchen from "../events/OrderKitchen";
 import firebase from "../../../data/firebase";
+import { Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
 
 class Kitchen extends React.Component {
   constructor(props) {
@@ -32,6 +34,23 @@ class Kitchen extends React.Component {
   render() {
     return (
       <div className="lead">
+        <Row>
+          <Col className="logo-menu">
+            <Row>
+              <Link to={"/"}>
+                <img
+                  src={require("../../../img/LOGO BURGER QUEEN-04.svg")}
+                  alt="logo"
+                />
+              </Link>
+              <img
+                className="menu-icon-template"
+                src={require("../../../img/icon-kitchen-yellow.svg")}
+                alt="logo"
+              />
+            </Row>
+          </Col>
+        </Row>
         <div className="order-kitchen-container">
           {this.state.orders.map((item, index) => (
             <OrderKitchen order={item}></OrderKitchen>
