@@ -31,8 +31,9 @@ class OrderMenu extends React.Component {
     });
   };
 
-  addToList(optionToAdd, valueToAdd) {
+  addToList(optionToAdd) {
     this.setState({ order: this.state.order.concat([{ name: optionToAdd }]) });
+    console.log("click");
   }
   onChangeValue = event => {
     this.setState({ value: event.target.value });
@@ -46,6 +47,7 @@ class OrderMenu extends React.Component {
   onAddItem = e => {
     this.setState(state => {
       const order = [...state.order, state.value];
+      console.log("order11", order);
       return {
         order,
         value: ""
@@ -65,9 +67,7 @@ class OrderMenu extends React.Component {
   readList = () => {
     console.log(this.props.order);
   };
-  // readList = () => {
-  //   console.log(this.props.estado);
-  // };
+
   addOrder = e => {
     e.preventDefault();
     this.setState({

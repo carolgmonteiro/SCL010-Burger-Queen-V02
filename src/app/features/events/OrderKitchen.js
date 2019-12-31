@@ -1,5 +1,5 @@
 import React from "react";
-import dataFirebase from "../../../data/data.js";
+// import dataFirebase from "../../../data/data.js";
 
 class OrderKitchen extends React.Component {
   constructor(props) {

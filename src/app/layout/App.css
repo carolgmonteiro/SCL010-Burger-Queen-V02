@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   width: 100%;
   /* display: flex; */
   /* background-color: #fff; */
@@ -83,14 +83,16 @@ li {
 .menu-icons {
   transition: all 0.3s ease 0s;
   outline: none;
-  font-family: "Roboto", sans-serif;
 }
 .menu-icons:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
-
+.menu-icons img {
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+}
 .inputFormulary {
   border: none;
   border-bottom: 1px solid #4f1a0f;
