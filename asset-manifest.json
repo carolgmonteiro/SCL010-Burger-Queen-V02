@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/SCL010-Burger-Queen-V02/static/css/main.1a9aff6d.chunk.css",
-    "main.js": "/SCL010-Burger-Queen-V02/static/js/main.6f663c95.chunk.js",
-    "main.js.map": "/SCL010-Burger-Queen-V02/static/js/main.6f663c95.chunk.js.map",
+    "main.css": "/SCL010-Burger-Queen-V02/static/css/main.ba38d32b.chunk.css",
+    "main.js": "/SCL010-Burger-Queen-V02/static/js/main.44dfda28.chunk.js",
+    "main.js.map": "/SCL010-Burger-Queen-V02/static/js/main.44dfda28.chunk.js.map",
     "runtime~main.js": "/SCL010-Burger-Queen-V02/static/js/runtime~main.4186377a.js",
     "runtime~main.js.map": "/SCL010-Burger-Queen-V02/static/js/runtime~main.4186377a.js.map",
     "static/css/2.01b78ea0.chunk.css": "/SCL010-Burger-Queen-V02/static/css/2.01b78ea0.chunk.css",
-    "static/js/2.ba62a20c.chunk.js": "/SCL010-Burger-Queen-V02/static/js/2.ba62a20c.chunk.js",
-    "static/js/2.ba62a20c.chunk.js.map": "/SCL010-Burger-Queen-V02/static/js/2.ba62a20c.chunk.js.map",
+    "static/js/2.45e7ddaa.chunk.js": "/SCL010-Burger-Queen-V02/static/js/2.45e7ddaa.chunk.js",
+    "static/js/2.45e7ddaa.chunk.js.map": "/SCL010-Burger-Queen-V02/static/js/2.45e7ddaa.chunk.js.map",
     "index.html": "/SCL010-Burger-Queen-V02/index.html",
-    "precache-manifest.448d272587b47e3e2fc633d39f0c43c2.js": "/SCL010-Burger-Queen-V02/precache-manifest.448d272587b47e3e2fc633d39f0c43c2.js",
+    "precache-manifest.d558b0a02efeb57d188f4e2795a89439.js": "/SCL010-Burger-Queen-V02/precache-manifest.d558b0a02efeb57d188f4e2795a89439.js",
     "service-worker.js": "/SCL010-Burger-Queen-V02/service-worker.js",
     "static/css/2.01b78ea0.chunk.css.map": "/SCL010-Burger-Queen-V02/static/css/2.01b78ea0.chunk.css.map",
-    "static/css/main.1a9aff6d.chunk.css.map": "/SCL010-Burger-Queen-V02/static/css/main.1a9aff6d.chunk.css.map",
+    "static/css/main.ba38d32b.chunk.css.map": "/SCL010-Burger-Queen-V02/static/css/main.ba38d32b.chunk.css.map",
     "static/media/LOGO BURGER QUEEN-04.svg": "/SCL010-Burger-Queen-V02/static/media/LOGO BURGER QUEEN-04.6d2748a8.svg",
     "static/media/delete_button.svg": "/SCL010-Burger-Queen-V02/static/media/delete_button.fceaeb2c.svg",
-    "static/media/icon-kitchen-yellow.svg": "/SCL010-Burger-Queen-V02/static/media/icon-kitchen-yellow.46bdada0.svg",
-    "static/media/icon-menu-drinks.svg": "/SCL010-Burger-Queen-V02/static/media/icon-menu-drinks.940e76fb.svg",
-    "static/media/icon-menu-food.svg": "/SCL010-Burger-Queen-V02/static/media/icon-menu-food.62386ca4.svg",
-    "static/media/icon-menu-yellow.svg": "/SCL010-Burger-Queen-V02/static/media/icon-menu-yellow.d0c0c08a.svg",
-    "static/media/icon-resume-yellow.svg": "/SCL010-Burger-Queen-V02/static/media/icon-resume-yellow.4ddd5a77.svg"
+    "static/media/icon-kitchen-yellow.svg": "/SCL010-Burger-Queen-V02/static/media/icon-kitchen-yellow.8ba5755f.svg",
+    "static/media/icon-menu-drinks.svg": "/SCL010-Burger-Queen-V02/static/media/icon-menu-drinks.958b429f.svg",
+    "static/media/icon-menu-food.svg": "/SCL010-Burger-Queen-V02/static/media/icon-menu-food.024eba92.svg",
+    "static/media/icon-menu-yellow.svg": "/SCL010-Burger-Queen-V02/static/media/icon-menu-yellow.21895d39.svg",
+    "static/media/icon-resume-yellow.svg": "/SCL010-Burger-Queen-V02/static/media/icon-resume-yellow.ff388635.svg"
   }
 }
