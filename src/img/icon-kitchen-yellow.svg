@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="125" height="124" viewBox="0 0 125 124">
     <defs>
         <style>
-            .cls-1{fill:#f7b32c}.cls-2,.cls-3{fill:#4f1a0f}.cls-3{font-size:15px;font-family:Roboto-Bold,Roboto;font-weight:700}.cls-4{filter:url(#Elipse_63)}
+            .cls-1{fill:#f7b32c}.cls-2,.cls-3{fill:#4f1a0f}.cls-3{font-size:15px;font-family:Lato, sans-serif ;font-weight:800}.cls-4{filter:url(#Elipse_63)}
         </style>
         <filter id="Elipse_63" width="125" height="124" x="0" y="0" filterUnits="userSpaceOnUse">
             <feOffset dy="3"/>
