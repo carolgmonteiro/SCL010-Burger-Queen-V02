@@ -1,11 +1,19 @@
 import React from "react";
+// import dataFirebase from "../../../data/data.js";
 
 class OrderKitchen extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      order: []
+    };
+  }
+
   maporders(orders) {
     if (orders) {
       return this.props.order.order.map((item, index) => (
         <label className="box-value">
-          <li>{item.name}</li>
+          <li>${item.name}</li>
           <li>${item.value}</li>
         </label>
       ));
@@ -16,11 +24,11 @@ class OrderKitchen extends React.Component {
   render() {
     return (
       <div className="order-kitchen-card">
-        <h6>{this.props.order.client}</h6>
+        <h6>Client:{this.props.order.client}</h6>
         <div className="line"></div>
-        <p>{this.props.order.waiter}</p>
+        <p>Waiter:{this.props.order.waiter}</p>
         <label className="box-value">
-          <p>{this.props.order.createdAt}</p>
+          <p>Date:{this.props.order.createdAt}</p>
         </label>
         <div className="line-thin"></div>
         <div>{this.maporders(this.props.order.order)}</div>
